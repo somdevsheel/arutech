@@ -1,0 +1,94 @@
+import { NextRequest, NextResponse } from "next/server";
+
+interface ContactPayload {
+  name: string;
+  email: string;
+  message: string;
+}
+
+function isValidEmail(email: string): boolean {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+export async function POST(request: NextRequest) {
+  try {
+    const body: ContactPayload = await request.json();
+    const { name, email, message } = body;
+
+    // Validate presence
+    if (!name || !email || !message) {
+      return NextResponse.json(
+        { success: false, error: "All fields are required." },
+        { status: 400 }
+      );
+    }
+
+    // Validate types
+    if (
+      typeof name !== "string" ||
+      typeof email !== "string" ||
+      typeof message !== "string"
+    ) {
+      return NextResponse.json(
+        { success: false, error: "Invalid field types." },
+        { status: 400 }
+      );
+    }
+
+    // Validate lengths
+    if (name.trim().length < 2) {
+      return NextResponse.json(
+        { success: false, error: "Name must be at least 2 characters." },
+        { status: 400 }
+      );
+    }
+
+    if (!isValidEmail(email.trim())) {
+      return NextResponse.json(
+        { success: false, error: "Please provide a valid email address." },
+        { status: 400 }
+      );
+    }
+
+    if (message.trim().length < 10) {
+      return NextResponse.json(
+        { success: false, error: "Message must be at least 10 characters." },
+        { status: 400 }
+      );
+    }
+
+    if (message.trim().length > 2000) {
+      return NextResponse.json(
+        { success: false, error: "Message must be under 2000 characters." },
+        { status: 400 }
+      );
+    }
+
+    // Log the submission (replace with email/DB integration in production)
+    const submission = {
+      name: name.trim(),
+      email: email.trim().toLowerCase(),
+      message: message.trim(),
+      timestamp: new Date().toISOString(),
+      ip: request.headers.get("x-forwarded-for") ?? "unknown",
+    };
+
+    console.log("[Arutech Contact Form]", JSON.stringify(submission, null, 2));
+
+    // TODO: Integrate nodemailer / SendGrid / database here
+
+    return NextResponse.json(
+      {
+        success: true,
+        message: "Thank you for reaching out. We'll get back to you within 24 hours.",
+      },
+      { status: 200 }
+    );
+  } catch (err) {
+    console.error("[Contact API Error]", err);
+    return NextResponse.json(
+      { success: false, error: "Something went wrong. Please try again." },
+      { status: 500 }
+    );
+  }
+}
