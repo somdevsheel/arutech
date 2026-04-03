@@ -91,7 +91,7 @@ export default function Contact() {
                     </svg>
                   ),
                   label: "Email",
-                  value: "hello@arutech.in",
+                  value: "hello@arutechconsultancy.com",
                 },
                 {
                   icon: (
