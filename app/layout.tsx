@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/next"
+import CookieBanner from "@/components/cookie-banner";
 
 export const metadata: Metadata = {
   title: "Arutech Consultancy Services LLP | AI, Cloud & Web Solutions",
@@ -33,6 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider>
           {children}
           <Analytics />
+          <CookieBanner />
         </ThemeProvider>
       </body>
     </html>
