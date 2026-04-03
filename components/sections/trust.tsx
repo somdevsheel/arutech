@@ -51,28 +51,28 @@ const highlights = [
 
 const testimonials = [
   {
-    // quote:
-    //   "Arutech took our rough product idea and turned it into a fully deployed web application in six weeks. The code quality was a cut above what we expected.",
-    // name: "Sandeep Yadav",
-    // role: "Founder, DigitalNest",
-    // initials: "SY",
-    // color: "bg-accent-500",
+    quote:
+      "Arutech built our restaurant website exactly how we imagined it. The design is beautiful, loads fast, and our customers love using it. Highly recommend their work.",
+    name: "Kamaldeep Singh",
+    role: "Owner, Shri Anandam Sweets & Restaurant",
+    initials: "KS",
+    color: "bg-amber-500",
   },
   {
-    // quote:
-    //   "Their cloud setup saved us significant overhead costs. Auto-scaling alone paid for the engagement in three months. Clear communication throughout.",
-    // name: "Kamaldeep Singh",
-    // role: "Founder, Shri Anandam sweets & restaurant",
-    // initials: "KS",
-    // color: "bg-teal-500",
+    quote:
+      "Working with Arutech was seamless from start to finish. They understood our vision for Digilab quickly and delivered a product we are proud to show clients.",
+    name: "Sandeep Yadav",
+    role: "Founder, Digilab",
+    initials: "SY",
+    color: "bg-accent-500",
   },
   {
-    // quote:
-    //   "We needed an ML integration under a tight deadline. They delivered on time, explained every decision, and gave us a codebase we could actually work with.",
-    // name: "Arjun Patel",
-    // role: "Head of Product, DataAxis",
-    // initials: "AP",
-    // color: "bg-violet-500",
+    quote:
+      "They built my animation portfolio website with a level of creativity and attention to detail I did not expect. It perfectly represents my work as a content creator.",
+    name: "Sandeep Tamta",
+    role: "Content Creator & Animator",
+    initials: "ST",
+    color: "bg-violet-500",
   },
 ];
 
