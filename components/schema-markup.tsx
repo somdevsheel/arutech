@@ -1,5 +1,5 @@
 // Server component — renders JSON-LD schema tags in <head>
-const BASE_URL = "https://arutechconsultancy.com";
+const BASE_URL = "https://www.arutechconsultancy.com";
 
 export default function SchemaMarkup() {
   const organizationSchema = {

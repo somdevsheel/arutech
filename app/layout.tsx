@@ -49,7 +49,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/next";
 import CookieBanner from "@/components/cookie-banner";
 
-const BASE_URL = "https://arutechconsultancy.com";
+const BASE_URL = "https://www.arutechconsultancy.com";
 const GA_ID = "G-PZ2FZVD9DN";
 
 export const metadata: Metadata = {
