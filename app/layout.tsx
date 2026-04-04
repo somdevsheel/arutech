@@ -48,10 +48,9 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/next";
 import CookieBanner from "@/components/cookie-banner";
-import SchemaMarkup from "@/components/schema-markup";
-import Script from "next/script";
 
 const BASE_URL = "https://arutechconsultancy.com";
+const GA_ID = "G-PZ2FZVD9DN";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -70,18 +69,15 @@ export const metadata: Metadata = {
     "Next.js development company",
     "software consultancy India",
     "AI ML solutions for business",
-    "cloud application deployment",
     "mobile app development India",
     "Arutech Consultancy",
     "web application development India",
-    "software development company India",
     "IT consultancy services India",
     "Freenoo PDF tools",
   ],
   authors: [{ name: "Arutech Consultancy Services LLP", url: BASE_URL }],
   creator: "Arutech Consultancy Services LLP",
   publisher: "Arutech Consultancy Services LLP",
-  category: "Technology",
   robots: {
     index: true,
     follow: true,
@@ -102,14 +98,22 @@ export const metadata: Metadata = {
     title: "Arutech Consultancy | AI, Cloud & Web Development India",
     description:
       "Expert AI/ML solutions, cloud deployment, React web & React Native mobile app development. Build smarter, deploy faster with Arutech.",
-    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: "Arutech Consultancy Services LLP" }],
+    images: [
+      {
+        url: `${BASE_URL}/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: "Arutech Consultancy Services LLP",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     site: "@arutech_consult",
     creator: "@arutech_consult",
     title: "Arutech Consultancy | AI, Cloud & Web Development India",
-    description: "Expert AI/ML solutions, cloud deployment, React web & React Native mobile development.",
+    description:
+      "Expert AI/ML solutions, cloud deployment, React web & React Native mobile development.",
     images: [`${BASE_URL}/og-image.png`],
   },
   verification: {
@@ -117,47 +121,87 @@ export const metadata: Metadata = {
   },
 };
 
-const GA_ID = "G-PZ2FZVD9DN";
+const schemaOrg = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${BASE_URL}/#organization`,
+  name: "Arutech Consultancy Services LLP",
+  url: BASE_URL,
+  logo: { "@type": "ImageObject", url: `${BASE_URL}/images/logo.png` },
+  email: "hello@arutechconsultancy.com",
+  sameAs: [
+    "https://www.facebook.com/arutechconsultancy",
+    "https://www.youtube.com/@ArutechConsultancy",
+    "https://www.instagram.com/arutech_consultancy",
+    "https://www.linkedin.com/company/arutech-consultancy",
+    "https://x.com/arutech_consult",
+  ],
+});
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+const schemaWebsite = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${BASE_URL}/#website`,
+  url: BASE_URL,
+  name: "Arutech Consultancy Services LLP",
+  publisher: { "@id": `${BASE_URL}/#organization` },
+});
+
+const schemaFaq = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What services does Arutech Consultancy offer?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Arutech offers AI & ML solutions, cloud deployment, React web app development, and React Native Android mobile app development.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Where is Arutech Consultancy based?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Arutech Consultancy Services LLP is based in India and works with clients remotely.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What products has Arutech built?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Arutech built Freenoo (free PDF tools at freenoo.com), Instachat (Android social app), and Moneto AI Terminal (coming soon).",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How can I contact Arutech Consultancy?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Contact via the form at arutechconsultancy.com/#contact or email hello@arutechconsultancy.com.",
+      },
+    },
+  ],
+});
+
+const gaScript = `
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_ID}');
+`.trim();
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        {/* ── Google Analytics 4 ── */}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_ID}', {
-              page_path: window.location.pathname,
-            });
-          `}
-        </Script>
-
-        {/* ── Facebook Pixel (optional — set env var to activate) ── */}
-        {process.env.NEXT_PUBLIC_FB_PIXEL_ID && (
-          <Script id="facebook-pixel" strategy="afterInteractive">
-            {`
-              !function(f,b,e,v,n,t,s)
-              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-              n.queue=[];t=b.createElement(e);t.async=!0;
-              t.src=v;s=b.getElementsByTagName(e)[0];
-              s.parentNode.insertBefore(t,s)}(window, document,'script',
-              'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '${process.env.NEXT_PUBLIC_FB_PIXEL_ID}');
-              fbq('track', 'PageView');
-            `}
-          </Script>
-        )}
-
-        {/* ── Google Fonts ── */}
+        {/* Google Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
@@ -165,8 +209,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
 
-        {/* ── Schema Markup ── */}
-        <SchemaMarkup />
+        {/* Google Analytics 4 */}
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
+        <script dangerouslySetInnerHTML={{ __html: gaScript }} />
+
+        {/* JSON-LD Schema */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaOrg }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaWebsite }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaFaq }} />
       </head>
       <body className="font-body antialiased transition-colors duration-300">
         <ThemeProvider>
