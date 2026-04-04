@@ -1,0 +1,29 @@
+# Arutech Consultancy Services LLP
+# https://arutechconsultancy.com
+
+User-agent: *
+Allow: /
+
+# Block internal/utility paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /404
+Disallow: /500
+
+# Allow important crawlers explicitly
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+# Sitemap location
+Sitemap: https://arutechconsultancy.com/sitemap.xml
