@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/_next/"],
     },
-    sitemap: "https://www.arutechconsultancy.com/sitemap.xml",
+    sitemap: "https://arutechconsultancy.com/sitemap.xml",
   };
 }

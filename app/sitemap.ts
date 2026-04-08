@@ -60,7 +60,7 @@
 
 import { MetadataRoute } from "next";
 
-const BASE_URL = "https://www.arutechconsultancy.com";
+const BASE_URL = "https://arutechconsultancy.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
