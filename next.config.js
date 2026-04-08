@@ -81,7 +81,7 @@ const nextConfig = {
       {
         source: "/:path*",
         has: [{ type: "host", value: "www.arutechconsultancy.com" }],
-        destination: "https://arutechconsultancy.com/:path*",
+        destination: "https://www.arutechconsultancy.com/:path*",
         permanent: true,
       },
     ];
