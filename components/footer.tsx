@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import { cn } from "@/lib/utils";
+import { useTheme } from "@/components/theme-provider";
 
 const footerLinks = {
   Services: [
@@ -25,6 +27,8 @@ const footerLinks = {
 
 export default function Footer() {
   const year = new Date().getFullYear();
+  const { theme } = useTheme();
+  const isLight = theme === "light";
 
   return (
     <footer className="relative border-t border-slate-800/60 bg-navy-950">
@@ -41,7 +45,10 @@ export default function Footer() {
                 alt="Arutech Consultancy"
                 width={140}
                 height={48}
-                className="h-10 w-auto object-contain mix-blend-screen brightness-110"
+                className={cn(
+                  "h-10 w-auto object-contain brightness-110",
+                  !isLight && "mix-blend-screen"
+                )}
               />
             </a>
             <p className="text-slate-500 text-sm leading-relaxed max-w-xs mb-6">

@@ -1,22 +1,9 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 export default function Hero() {
-  const heroRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) e.target.classList.add("visible");
-        });
-      },
-      { threshold: 0.1 }
-    );
-    heroRef.current?.querySelectorAll(".animate-on-scroll").forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
+  const heroRef = useScrollReveal();
 
   return (
     <section

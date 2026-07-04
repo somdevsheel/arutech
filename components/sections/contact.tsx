@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 interface FormState {
   name: string;
@@ -11,19 +12,10 @@ interface FormState {
 type Status = "idle" | "loading" | "success" | "error";
 
 export default function Contact() {
-  const sectionRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useScrollReveal();
   const [form, setForm] = useState<FormState>({ name: "", email: "", message: "" });
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState("");
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add("visible"); }),
-      { threshold: 0.1 }
-    );
-    sectionRef.current?.querySelectorAll(".animate-on-scroll").forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
