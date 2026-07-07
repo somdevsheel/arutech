@@ -45,6 +45,15 @@ export const metadata: Metadata = {
     },
   },
   alternates: { canonical: BASE_URL },
+  icons: {
+    icon: [
+      { url: "/icon.png", type: "image/png", sizes: "500x500" },
+    ],
+    apple: [
+      { url: "/icon.png", sizes: "500x500", type: "image/png" },
+    ],
+    shortcut: "/icon.png",
+  },
   openGraph: {
     type: "website",
     locale: "en_IN",
