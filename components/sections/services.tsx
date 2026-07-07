@@ -6,13 +6,13 @@ const services = [
   {
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
       </svg>
     ),
-    title: "AI & Machine Learning",
-    description: "Custom ML pipelines, model training, and production-ready AI integration tailored to your business data and objectives.",
-    tags: ["Model Training", "API Integration", "Data Pipelines"],
-    cta: "Explore AI Solutions",
+    title: "Pay Per Click / Google Ads",
+    description: "ROI-focused Google Ads campaigns — from keyword research and ad copy to bid strategy and conversion tracking that drives real results.",
+    tags: ["Google Ads", "Search Campaigns", "Conversion Tracking"],
+    cta: "Launch My Ads",
     color: "text-orange-500",
     bg: "bg-orange-50",
     hoverBorder: "hover:border-orange-200",
@@ -21,13 +21,13 @@ const services = [
   {
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
       </svg>
     ),
-    title: "Cloud Deployment",
-    description: "End-to-end cloud infrastructure, CI/CD pipelines, auto-scaling, and 24/7 monitoring for applications that need to stay fast.",
-    tags: ["AWS / GCP / Azure", "Docker & K8s", "CI/CD"],
-    cta: "Get Cloud Quote",
+    title: "Social Media Marketing",
+    description: "Strategic content, paid social campaigns, and community management across Instagram, Facebook, LinkedIn, and more to grow your brand.",
+    tags: ["Meta Ads", "Content Strategy", "Engagement"],
+    cta: "Grow My Social",
     color: "text-sky-500",
     bg: "bg-sky-50",
     hoverBorder: "hover:border-sky-200",
@@ -36,42 +36,12 @@ const services = [
   {
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-      </svg>
-    ),
-    title: "Web App Development",
-    description: "React-based web applications built with performance, accessibility, and maintainability as first principles — not afterthoughts.",
-    tags: ["Next.js", "TypeScript", "REST & GraphQL"],
-    cta: "Build My Website",
-    color: "text-violet-500",
-    bg: "bg-violet-50",
-    hoverBorder: "hover:border-violet-200",
-    hoverShadow: "hover:shadow-violet-50",
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-      </svg>
-    ),
-    title: "Mobile App Development",
-    description: "Cross-platform Android & iOS apps using React Native — one codebase, native performance, shipped to both stores.",
-    tags: ["React Native", "Expo", "Play Store Ready"],
-    cta: "Build My App",
-    color: "text-emerald-500",
-    bg: "bg-emerald-50",
-    hoverBorder: "hover:border-emerald-200",
-    hoverShadow: "hover:shadow-emerald-50",
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
       </svg>
     ),
     title: "Digital Marketing",
-    description: "SEO, paid ads, content strategy, and conversion optimisation to grow your organic traffic and turn visitors into clients.",
-    tags: ["SEO", "Google Ads", "Analytics"],
+    description: "End-to-end digital strategy covering SEO, email marketing, analytics, and content that compounds over time to grow organic reach.",
+    tags: ["SEO", "Email Marketing", "Analytics"],
     cta: "Grow My Traffic",
     color: "text-rose-500",
     bg: "bg-rose-50",
@@ -81,17 +51,62 @@ const services = [
   {
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
       </svg>
     ),
-    title: "Business Analytics",
-    description: "Dashboards, data pipelines, and reporting tools that turn your raw business data into actionable insights you can act on today.",
-    tags: ["Dashboards", "Data Pipelines", "KPI Reporting"],
-    cta: "Analyse My Business",
+    title: "Web Design & Development",
+    description: "Conversion-optimised websites and web apps — designed for brand impact and built on modern tech for speed, SEO, and scalability.",
+    tags: ["Next.js", "UI/UX Design", "SEO-Ready"],
+    cta: "Build My Website",
+    color: "text-violet-500",
+    bg: "bg-violet-50",
+    hoverBorder: "hover:border-violet-200",
+    hoverShadow: "hover:shadow-violet-50",
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+      </svg>
+    ),
+    title: "AI Automation & Workflows",
+    description: "Automate repetitive tasks, connect your tools, and build intelligent workflows that save hours every week and reduce human error.",
+    tags: ["n8n / Zapier", "API Integrations", "Process Automation"],
+    cta: "Automate My Business",
     color: "text-amber-500",
     bg: "bg-amber-50",
     hoverBorder: "hover:border-amber-200",
     hoverShadow: "hover:shadow-amber-50",
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+      </svg>
+    ),
+    title: "App Development",
+    description: "Cross-platform Android & iOS apps using React Native — one codebase, native performance, shipped to both stores.",
+    tags: ["React Native", "Android & iOS", "Play Store Ready"],
+    cta: "Build My App",
+    color: "text-emerald-500",
+    bg: "bg-emerald-50",
+    hoverBorder: "hover:border-emerald-200",
+    hoverShadow: "hover:shadow-emerald-50",
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+    ),
+    title: "Gen AI",
+    description: "Build custom AI-powered products — chatbots, content generators, intelligent search, and LLM integrations tailored to your business.",
+    tags: ["LLM Integration", "RAG & Embeddings", "Custom AI Agents"],
+    cta: "Explore Gen AI",
+    color: "text-indigo-500",
+    bg: "bg-indigo-50",
+    hoverBorder: "hover:border-indigo-200",
+    hoverShadow: "hover:shadow-indigo-50",
   },
 ];
 
