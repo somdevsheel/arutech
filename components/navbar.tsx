@@ -64,9 +64,9 @@ export default function Navbar() {
           <Image
             src="/images/logo.png"
             alt="Arutech Consultancy"
-            width={130}
-            height={44}
-            className="h-9 w-auto object-contain"
+            width={150}
+            height={50}
+            className="h-11 w-auto object-contain"
             priority
           />
         </a>
