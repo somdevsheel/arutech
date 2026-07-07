@@ -1,14 +1,18 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/navbar";
+import FloatingTab from "@/components/FloatingTab";
 import Hero from "@/components/sections/hero";
 import Services from "@/components/sections/services";
-import Products from "@/components/sections/products";
-import Process from "@/components/sections/process";
-import Portfolio from "@/components/sections/portfolio";
 import Trust from "@/components/sections/trust";
+import TechStack from "@/components/sections/techstack";
+import Process from "@/components/sections/process";
+import Funnels from "@/components/sections/funnels";
+import Products from "@/components/sections/products";
+import Portfolio from "@/components/sections/portfolio";
 import Vision from "@/components/sections/vision";
 import Contact from "@/components/sections/contact";
 import Footer from "@/components/footer";
+import ChatWidget from "@/components/ChatWidget";
 
 export const metadata: Metadata = {
   title: "Arutech Consultancy Services LLP | AI, Cloud & Web App Development India",
@@ -23,15 +27,19 @@ export default function Home() {
   return (
     <main className="relative overflow-x-hidden">
       <Navbar />
+      <FloatingTab />
       <Hero />
       <Services />
-      <Products />
-      <Process />
-      <Portfolio />
       <Trust />
+      <TechStack />
+      <Process />
+      <Funnels />
+      <Products />
+      <Portfolio />
       <Vision />
       <Contact />
       <Footer />
+      <ChatWidget />
     </main>
   );
 }

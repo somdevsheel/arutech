@@ -21,13 +21,25 @@ module.exports = {
           600: "#123970",
         },
         accent: {
-          400: "#38BDF8",
-          500: "#0EA5E9",
-          600: "#0284C7",
+          400: "#FB923C",  // orange-400 (saffron light)
+          500: "#F97316",  // orange-500 (saffron primary)
+          600: "#EA580C",  // orange-600 (saffron dark)
         },
         teal: {
           400: "#2DD4BF",
           500: "#14B8A6",
+        },
+        saffron: {
+          50:  "#fff8f0",
+          100: "#fef0da",
+          200: "#fdd9aa",
+          300: "#fbb76b",
+          400: "#f99030",
+          500: "#f47c10",
+          600: "#e06808",
+          700: "#b85808",
+          800: "#923e08",
+          900: "#6f3008",
         },
       },
       backgroundImage: {

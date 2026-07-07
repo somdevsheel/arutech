@@ -150,7 +150,7 @@ gtag('config', '${GA_ID}');
 
 // Runs synchronously before first paint to apply the saved theme,
 // preventing a flash of the default dark theme for light/normal users.
-const themeInitScript = `(function(){try{var t=localStorage.getItem('arutech-theme')||'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();`;
+const themeInitScript = `(function(){try{var t=localStorage.getItem('arutech-theme-v2')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();`;
 
 export default function RootLayout({
   children,
@@ -158,7 +158,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
         {/* Theme init — must be first to avoid FOUC */}
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />

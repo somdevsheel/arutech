@@ -42,15 +42,15 @@ const themes: { value: Theme; label: string; icon: React.ReactNode; desc: string
 ];
 
 const activeColors: Record<Theme, string> = {
-  dark: "bg-navy-800 border-accent-500/40 text-accent-400",
-  light: "bg-slate-100 border-accent-500/60 text-accent-600",
-  normal: "bg-slate-700 border-teal-400/40 text-teal-400",
+  dark:   "bg-gray-100 border border-orange-400/40 text-orange-500",
+  light:  "bg-orange-50 border border-orange-400/60 text-orange-600",
+  normal: "bg-gray-100 border border-orange-400/40 text-orange-500",
 };
 
 const triggerColors: Record<Theme, string> = {
-  dark: "bg-navy-800/80 border-slate-700/60 text-slate-300 hover:border-accent-500/40 hover:text-accent-400",
-  light: "bg-white/90 border-slate-300 text-slate-600 hover:border-accent-500/60 hover:text-accent-600",
-  normal: "bg-slate-800/80 border-slate-600/60 text-slate-300 hover:border-teal-400/40 hover:text-teal-400",
+  dark:   "bg-slate-700 border-slate-600 text-slate-200 hover:border-orange-400/50 hover:text-orange-400",
+  light:  "bg-white border-gray-300 text-gray-600 hover:border-orange-400/60 hover:text-orange-500",
+  normal: "bg-slate-700 border-slate-600 text-slate-200 hover:border-orange-400/50 hover:text-orange-400",
 };
 
 export default function ThemeToggle() {
@@ -88,8 +88,7 @@ export default function ThemeToggle() {
 
       {/* Dropdown */}
       {open && (
-        <div className="absolute right-0 top-full mt-2 w-44 rounded-2xl border border-white/10 bg-navy-900/95 backdrop-blur-md shadow-2xl shadow-black/40 overflow-hidden z-50
-          [data-theme='light']_&:bg-white [data-theme='light']_&:border-slate-200">
+        <div className="absolute right-0 top-full mt-2 w-44 rounded-2xl border border-gray-200 bg-white backdrop-blur-md shadow-xl overflow-hidden z-50">
           <div className="p-1.5">
             {themes.map((t) => (
               <button
@@ -98,7 +97,7 @@ export default function ThemeToggle() {
                 className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-left transition-all text-sm
                   ${theme === t.value
                     ? activeColors[t.value]
-                    : "text-slate-400 hover:bg-white/5 hover:text-white"
+                    : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
                   }`}
               >
                 <span className="flex-shrink-0">{t.icon}</span>

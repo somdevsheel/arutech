@@ -10,16 +10,16 @@ interface ThemeContextValue {
 }
 
 const ThemeContext = createContext<ThemeContextValue>({
-  theme: "dark",
+  theme: "light",
   setTheme: () => {},
 });
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>("dark");
+  const [theme, setThemeState] = useState<Theme>("light");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const stored = localStorage.getItem("arutech-theme") as Theme | null;
+    const stored = localStorage.getItem("arutech-theme-v2") as Theme | null;
     if (stored) setThemeState(stored);
     setMounted(true);
   }, []);
@@ -28,7 +28,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     if (!mounted) return;
     const root = document.documentElement;
     root.setAttribute("data-theme", theme);
-    localStorage.setItem("arutech-theme", theme);
+    localStorage.setItem("arutech-theme-v2", theme);
   }, [theme, mounted]);
 
   const setTheme = (t: Theme) => setThemeState(t);
