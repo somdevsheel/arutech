@@ -130,7 +130,7 @@ export default function Portfolio() {
   const sectionRef = useScrollReveal();
 
   return (
-    <section id="portfolio" ref={sectionRef} className="relative py-24 lg:py-32 bg-gray-50">
+    <section id="portfolio" ref={sectionRef} className="relative py-14 lg:py-20 bg-gray-50">
       <div className="absolute inset-0 line-grid opacity-30" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">

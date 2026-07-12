@@ -84,12 +84,12 @@ export default function Funnels() {
   const sectionRef = useScrollReveal();
 
   return (
-    <section id="funnels" ref={sectionRef} className="relative py-24 lg:py-32 bg-white">
+    <section id="funnels" ref={sectionRef} className="relative py-14 lg:py-20 bg-white">
       <div className="absolute inset-0 dot-grid opacity-30" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="animate-on-scroll inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 border border-orange-200 mb-5">
             <span className="text-xs font-mono text-orange-600 tracking-widest font-semibold uppercase">Funnels & Pipelines</span>
           </div>
@@ -134,7 +134,7 @@ export default function Funnels() {
         </div>
 
         {/* CTA */}
-        <div className="animate-on-scroll delay-400 text-center mt-12">
+        <div className="animate-on-scroll delay-400 text-center mt-8">
           <p className="text-gray-600 mb-5 text-lg">
             Ready to build a funnel that converts?
           </p>

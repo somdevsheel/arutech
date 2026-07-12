@@ -6,7 +6,7 @@ export default function Vision() {
   const sectionRef = useScrollReveal();
 
   return (
-    <section id="vision" ref={sectionRef} className="relative py-24 lg:py-32 overflow-hidden bg-gray-900">
+    <section id="vision" ref={sectionRef} className="relative py-14 lg:py-20 overflow-hidden bg-gray-900">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-900/95 to-gray-900" />
       <div className="absolute inset-0 line-grid opacity-20" />

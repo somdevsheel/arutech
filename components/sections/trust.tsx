@@ -127,12 +127,12 @@ export default function Trust() {
   function next() { setActiveIdx(i => (i + 1) % len); }
 
   return (
-    <section id="trust" ref={sectionRef} className="relative py-24 lg:py-32 bg-white">
+    <section id="trust" ref={sectionRef} className="relative py-14 lg:py-20 bg-white">
       <div className="absolute inset-0 dot-grid opacity-30" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="animate-on-scroll inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 border border-orange-200 mb-5">
             <span className="text-xs font-mono text-orange-600 tracking-widest font-semibold uppercase">Client Feedback</span>
           </div>
@@ -147,7 +147,7 @@ export default function Trust() {
         </div>
 
         {/* Highlights */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
           {highlights.map((h, i) => (
             <div
               key={h.title}

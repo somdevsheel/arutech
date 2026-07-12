@@ -50,7 +50,7 @@ export default function Contact() {
     "w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-orange-300 focus:border-orange-400 transition-all";
 
   return (
-    <section id="contact" ref={sectionRef} className="relative py-24 lg:py-32 bg-gray-50">
+    <section id="contact" ref={sectionRef} className="relative py-14 lg:py-20 bg-gray-50">
       <div className="absolute inset-0 dot-grid opacity-40" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">

@@ -49,12 +49,12 @@ export default function Process() {
   const sectionRef = useScrollReveal();
 
   return (
-    <section id="process" ref={sectionRef} className="relative py-24 lg:py-32 bg-gray-50">
+    <section id="process" ref={sectionRef} className="relative py-14 lg:py-20 bg-gray-50">
       <div className="absolute inset-0 dot-grid opacity-40" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="animate-on-scroll inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 border border-orange-200 mb-5">
             <span className="text-xs font-mono text-orange-600 tracking-widest font-semibold uppercase">Our Approach</span>
           </div>
