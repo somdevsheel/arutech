@@ -43,12 +43,14 @@ function getTransporter(): nodemailer.Transporter {
 export async function sendContactNotification({
   name,
   email,
+  phone,
   message,
   ip,
   submittedAt,
 }: {
   name: string;
   email: string;
+  phone?: string;
   message: string;
   ip: string;
   submittedAt: Date;
@@ -100,6 +102,7 @@ export async function sendContactNotification({
                     <p style="margin:0 0 4px;font-size:11px;color:#38BDF8;font-family:monospace;text-transform:uppercase;letter-spacing:2px;">From</p>
                     <p style="margin:0 0 4px;font-size:18px;font-weight:600;color:#F1F5F9;">${name}</p>
                     <a href="mailto:${email}" style="color:#38BDF8;font-size:14px;text-decoration:none;">${email}</a>
+                    ${phone ? `<p style="margin:4px 0 0;font-size:13px;color:#94A3B8;">📞 ${phone}</p>` : ""}
                   </td>
                 </tr>
               </table>
@@ -144,7 +147,7 @@ export async function sendContactNotification({
 New Contact Form Submission
 ===========================
 Name:    ${name}
-Email:   ${email}
+Email:   ${email}${phone ? `\nPhone:   ${phone}` : ""}
 Date:    ${formattedDate} IST
 
 Message:

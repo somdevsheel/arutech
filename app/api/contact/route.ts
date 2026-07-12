@@ -5,6 +5,7 @@ import { sendContactNotification } from "@/lib/mailer";
 interface ContactPayload {
   name: string;
   email: string;
+  phone?: string;
   message: string;
 }
 
@@ -49,7 +50,7 @@ export async function POST(request: NextRequest) {
     }
 
     const body: ContactPayload = await request.json();
-    const { name, email, message } = body;
+    const { name, email, phone, message } = body;
 
     // ── Validation ──────────────────────────────────────────────
     if (!name || !email || !message) {
@@ -126,6 +127,7 @@ export async function POST(request: NextRequest) {
       await sendContactNotification({
         name:        cleanName,
         email:       cleanEmail,
+        phone:       phone?.trim() || undefined,
         message:     cleanMessage,
         ip,
         submittedAt,

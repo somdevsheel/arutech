@@ -6,6 +6,7 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 interface FormState {
   name: string;
   email: string;
+  phone: string;
   message: string;
 }
 
@@ -13,9 +14,31 @@ type Status = "idle" | "loading" | "success" | "error";
 
 export default function Contact() {
   const sectionRef = useScrollReveal();
-  const [form, setForm] = useState<FormState>({ name: "", email: "", message: "" });
+  const [form, setForm] = useState<FormState>({ name: "", email: "", phone: "", message: "" });
+  const [countryCode, setCountryCode] = useState("+91");
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState("");
+
+  const countryCodes = [
+    { code: "+91", flag: "🇮🇳", name: "India" },
+    { code: "+1",  flag: "🇺🇸", name: "USA/Canada" },
+    { code: "+44", flag: "🇬🇧", name: "UK" },
+    { code: "+61", flag: "🇦🇺", name: "Australia" },
+    { code: "+971", flag: "🇦🇪", name: "UAE" },
+    { code: "+65", flag: "🇸🇬", name: "Singapore" },
+    { code: "+60", flag: "🇲🇾", name: "Malaysia" },
+    { code: "+49", flag: "🇩🇪", name: "Germany" },
+    { code: "+33", flag: "🇫🇷", name: "France" },
+    { code: "+81", flag: "🇯🇵", name: "Japan" },
+    { code: "+86", flag: "🇨🇳", name: "China" },
+    { code: "+27", flag: "🇿🇦", name: "South Africa" },
+    { code: "+55", flag: "🇧🇷", name: "Brazil" },
+    { code: "+52", flag: "🇲🇽", name: "Mexico" },
+    { code: "+92", flag: "🇵🇰", name: "Pakistan" },
+    { code: "+880", flag: "🇧🇩", name: "Bangladesh" },
+    { code: "+94", flag: "🇱🇰", name: "Sri Lanka" },
+    { code: "+977", flag: "🇳🇵", name: "Nepal" },
+  ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -30,7 +53,10 @@ export default function Contact() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          ...form,
+          phone: form.phone ? `${countryCode} ${form.phone}` : "",
+        }),
       });
       const data = await res.json();
       if (!res.ok || !data.success) {
@@ -38,7 +64,8 @@ export default function Contact() {
         setStatus("error");
       } else {
         setStatus("success");
-        setForm({ name: "", email: "", message: "" });
+        setForm({ name: "", email: "", phone: "", message: "" });
+        setCountryCode("+91");
       }
     } catch {
       setErrorMsg("Network error. Please check your connection and try again.");
@@ -178,6 +205,33 @@ export default function Contact() {
                       required
                       className={inputClasses}
                     />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-600 mb-1.5">
+                      Mobile Number <span className="text-gray-400 font-normal">(optional)</span>
+                    </label>
+                    <div className="flex gap-2">
+                      <select
+                        value={countryCode}
+                        onChange={(e) => setCountryCode(e.target.value)}
+                        className="px-3 py-3 bg-white border border-gray-200 rounded-xl text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-orange-300 focus:border-orange-400 transition-all cursor-pointer flex-shrink-0"
+                      >
+                        {countryCodes.map((c) => (
+                          <option key={c.code} value={c.code}>
+                            {c.flag} {c.code}
+                          </option>
+                        ))}
+                      </select>
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={form.phone}
+                        onChange={handleChange}
+                        placeholder="Add mobile number..."
+                        className={`${inputClasses} flex-1`}
+                      />
+                    </div>
                   </div>
 
                   <div>
