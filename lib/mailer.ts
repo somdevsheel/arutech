@@ -182,7 +182,7 @@ Saved to: MongoDB Atlas → arutechdata.contact_messages
           <!-- Body -->
           <tr>
             <td style="background:#ffffff;padding:32px;border:1px solid #e2e8f0;border-top:none;border-bottom:none;">
-              <p style="margin:0 0 16px;font-size:15px;color:#334155;line-height:1.7;">Hi <strong>${name.split(" ")[0]}</strong>,</p>
+              <p style="margin:0 0 16px;font-size:15px;color:#334155;line-height:1.7;">Dear Client,</p>
               <p style="margin:0 0 16px;font-size:15px;color:#334155;line-height:1.7;">
                 We've received your message and will get back to you within <strong>24 hours</strong>.
               </p>
@@ -228,7 +228,7 @@ Saved to: MongoDB Atlas → arutechdata.contact_messages
 </html>
     `,
     text: `
-Hi ${name.split(" ")[0]},
+Dear Client,
 
 Thanks for reaching out to Arutech! We've received your message and will get back to you within 24 hours.
 
