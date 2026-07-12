@@ -73,7 +73,7 @@ export default function Footer() {
               />
             </a>
             <p className="text-gray-500 text-sm leading-relaxed max-w-xs mb-6">
-              Arutech Consultancy Services LLP — building intelligent software systems and marketing funnels for businesses that need to move fast and stay reliable.
+              At Arutech Consultancy Services, we build intelligent software, AI-powered solutions, and digital marketing strategies that help businesses accelerate growth, streamline operations, and stay ahead in a rapidly evolving digital world.
             </p>
 
             {/* Socials */}

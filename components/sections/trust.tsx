@@ -65,31 +65,128 @@ const testimonials = [
   {
     quote: "Arutech built our restaurant website exactly how we imagined it. The design is beautiful, loads fast, and our customers love using it. Highly recommend their work.",
     name: "Kamaldeep Singh",
-    role: "Owner, Shri Anandam Sweets & Restaurant",
+    role: "Owner",
+    company: "Shri Anandam Sweets & Restaurant",
     initials: "KS",
-    color: "bg-amber-500",
+    gradient: "from-amber-400 to-orange-500",
+    avatar: (
+      <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="40" cy="40" r="40" fill="url(#g1)" />
+        <defs>
+          <radialGradient id="g1" cx="30%" cy="30%">
+            <stop offset="0%" stopColor="#FCD34D" />
+            <stop offset="100%" stopColor="#F97316" />
+          </radialGradient>
+        </defs>
+        {/* Head */}
+        <circle cx="40" cy="30" r="13" fill="#FDDCB5" />
+        {/* Hair / turban */}
+        <path d="M27 26 Q28 14 40 13 Q52 14 53 26 Q48 20 40 20 Q32 20 27 26Z" fill="#1E40AF" />
+        <ellipse cx="40" cy="13" rx="8" ry="4" fill="#2563EB" />
+        {/* Eyes */}
+        <ellipse cx="35" cy="29" rx="2" ry="2.5" fill="#1E293B" />
+        <ellipse cx="45" cy="29" rx="2" ry="2.5" fill="#1E293B" />
+        {/* Smile */}
+        <path d="M35 35 Q40 39 45 35" stroke="#92400E" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+        {/* Beard */}
+        <path d="M32 38 Q40 44 48 38 Q46 46 40 47 Q34 46 32 38Z" fill="#92400E" opacity="0.4" />
+        {/* Shoulders */}
+        <path d="M20 68 Q25 55 40 53 Q55 55 60 68Z" fill="#1E40AF" />
+      </svg>
+    ),
+    rating: 5,
   },
   {
     quote: "Working with Arutech was seamless from start to finish. They understood our vision for Digilab quickly and delivered a product we are proud to show clients.",
     name: "Sandeep Yadav",
-    role: "Founder, Digilab",
+    role: "Founder",
+    company: "Digilab",
     initials: "SY",
-    color: "bg-orange-500",
+    gradient: "from-orange-400 to-rose-500",
+    avatar: (
+      <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="40" cy="40" r="40" fill="url(#g2)" />
+        <defs>
+          <radialGradient id="g2" cx="30%" cy="30%">
+            <stop offset="0%" stopColor="#FB923C" />
+            <stop offset="100%" stopColor="#E11D48" />
+          </radialGradient>
+        </defs>
+        {/* Head */}
+        <circle cx="40" cy="30" r="13" fill="#FDDCB5" />
+        {/* Short hair */}
+        <path d="M27 26 Q27 15 40 14 Q53 15 53 26 Q50 18 40 18 Q30 18 27 26Z" fill="#1E293B" />
+        {/* Eyes */}
+        <ellipse cx="35" cy="29" rx="2" ry="2.5" fill="#1E293B" />
+        <ellipse cx="45" cy="29" rx="2" ry="2.5" fill="#1E293B" />
+        {/* Glasses */}
+        <rect x="31" y="26" width="8" height="6" rx="3" stroke="#475569" strokeWidth="1.5" fill="none" />
+        <rect x="41" y="26" width="8" height="6" rx="3" stroke="#475569" strokeWidth="1.5" fill="none" />
+        <line x1="39" y1="29" x2="41" y2="29" stroke="#475569" strokeWidth="1.5" />
+        {/* Smile */}
+        <path d="M35 36 Q40 40 45 36" stroke="#92400E" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+        {/* Suit / shirt */}
+        <path d="M20 68 Q25 54 40 52 Q55 54 60 68Z" fill="#1E293B" />
+        <path d="M37 52 L40 58 L43 52" fill="white" />
+        <line x1="40" y1="58" x2="40" y2="65" stroke="white" strokeWidth="1.5" />
+      </svg>
+    ),
+    rating: 5,
   },
   {
     quote: "They built my animation portfolio website with a level of creativity and attention to detail I did not expect. It perfectly represents my work as a content creator.",
     name: "Sandeep Tamta",
     role: "Content Creator & Animator",
+    company: "",
     initials: "ST",
-    color: "bg-violet-500",
+    gradient: "from-violet-400 to-purple-600",
+    avatar: (
+      <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="40" cy="40" r="40" fill="url(#g3)" />
+        <defs>
+          <radialGradient id="g3" cx="30%" cy="30%">
+            <stop offset="0%" stopColor="#A78BFA" />
+            <stop offset="100%" stopColor="#7C3AED" />
+          </radialGradient>
+        </defs>
+        {/* Head */}
+        <circle cx="40" cy="30" r="13" fill="#FDDCB5" />
+        {/* Creative wavy hair */}
+        <path d="M27 24 Q29 12 40 13 Q51 12 53 24 Q50 16 45 17 Q42 13 40 15 Q38 13 35 17 Q30 16 27 24Z" fill="#7C3AED" />
+        {/* Side hair streaks */}
+        <path d="M27 24 Q25 28 27 32" stroke="#A78BFA" strokeWidth="2" strokeLinecap="round" fill="none" />
+        <path d="M53 24 Q55 28 53 32" stroke="#A78BFA" strokeWidth="2" strokeLinecap="round" fill="none" />
+        {/* Eyes */}
+        <ellipse cx="35" cy="29" rx="2.5" ry="2.5" fill="#1E293B" />
+        <ellipse cx="45" cy="29" rx="2.5" ry="2.5" fill="#1E293B" />
+        <circle cx="36" cy="28" r="0.8" fill="white" />
+        <circle cx="46" cy="28" r="0.8" fill="white" />
+        {/* Smile */}
+        <path d="M35 36 Q40 41 45 36" stroke="#92400E" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+        {/* Creative hoodie */}
+        <path d="M20 68 Q25 54 40 52 Q55 54 60 68Z" fill="#4C1D95" />
+        <path d="M36 52 Q40 56 44 52 Q42 60 40 63 Q38 60 36 52Z" fill="#6D28D9" />
+      </svg>
+    ),
+    rating: 5,
   },
 ];
+
+function StarRating({ rating }: { rating: number }) {
+  return (
+    <div className="flex gap-0.5">
+      {[...Array(5)].map((_, i) => (
+        <svg key={i} className={`w-3.5 h-3.5 ${i < rating ? "text-amber-400 fill-amber-400" : "text-gray-200 fill-gray-200"}`} viewBox="0 0 24 24">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+        </svg>
+      ))}
+    </div>
+  );
+}
 
 export default function Trust() {
   const sectionRef = useScrollReveal();
   const [dbReviews, setDbReviews] = useState<DBReview[] | null>(null);
-  const [activeIdx, setActiveIdx] = useState(0);
-  const [paused, setPaused] = useState(false);
 
   useEffect(() => {
     fetch("/api/reviews")
@@ -98,33 +195,16 @@ export default function Trust() {
       .catch(() => {});
   }, []);
 
-  const activeTestimonials = [
-    ...testimonials.map(t => ({ ...t, rating: 5 })),
-    ...(dbReviews || []).map(r => ({
-      quote: r.quote,
-      name: r.name,
-      role: [r.role, r.company].filter(Boolean).join(", "),
-      initials: r.initials,
-      color: r.avatarColor,
-      rating: r.rating,
-    })),
-  ];
-
-  const len = activeTestimonials.length;
-
-  // Clamp index if list shrinks (e.g. DB reviews unload)
-  useEffect(() => {
-    setActiveIdx(i => (i >= len ? 0 : i));
-  }, [len]);
-
-  useEffect(() => {
-    if (paused || len <= 1) return;
-    const timer = setInterval(() => setActiveIdx(i => (i + 1) % len), 5000);
-    return () => clearInterval(timer);
-  }, [paused, len]);
-
-  function prev() { setActiveIdx(i => (i - 1 + len) % len); }
-  function next() { setActiveIdx(i => (i + 1) % len); }
+  const extraReviews = (dbReviews || []).map(r => ({
+    quote: r.quote,
+    name: r.name,
+    role: r.role,
+    company: r.company,
+    initials: r.initials,
+    gradient: "from-gray-400 to-gray-600",
+    avatar: null,
+    rating: r.rating,
+  }));
 
   return (
     <section id="trust" ref={sectionRef} className="relative py-14 lg:py-20 bg-white">
@@ -147,111 +227,80 @@ export default function Trust() {
         </div>
 
         {/* Highlights */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
           {highlights.map((h, i) => (
             <div
               key={h.title}
-              className={`animate-on-scroll delay-${(i + 1) * 100} card-hover p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all`}
+              className={`animate-on-scroll delay-${(i + 1) * 100} card-hover p-5 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all`}
             >
-              <div className={`inline-flex p-2.5 rounded-xl ${h.bg} ${h.color} mb-4`}>
+              <div className={`inline-flex p-2.5 rounded-xl ${h.bg} ${h.color} mb-3`}>
                 {h.icon}
               </div>
-              <h3 className="font-display text-base font-semibold text-gray-900 mb-2">{h.title}</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">{h.description}</p>
+              <h3 className="font-display text-sm font-semibold text-gray-900 mb-1.5">{h.title}</h3>
+              <p className="text-gray-500 text-xs leading-relaxed">{h.description}</p>
             </div>
           ))}
         </div>
 
-        {/* Testimonials Carousel */}
-        <div
-          className="relative max-w-3xl mx-auto"
-          onMouseEnter={() => setPaused(true)}
-          onMouseLeave={() => setPaused(false)}
-        >
-          {/* Slide track */}
-          <div className="overflow-hidden rounded-2xl">
+        {/* Testimonials — 3-column grid */}
+        <div className="grid md:grid-cols-3 gap-5">
+          {testimonials.map((t, i) => (
             <div
-              className="flex transition-transform duration-700 ease-in-out"
-              style={{
-                width: `${len * 100}%`,
-                transform: `translateX(-${activeIdx * (100 / len)}%)`,
-              }}
+              key={t.name}
+              className={`animate-on-scroll delay-${(i + 1) * 100} group relative bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all overflow-hidden`}
             >
-              {activeTestimonials.map((t, i) => (
-                <div key={t.name + i} style={{ width: `${100 / len}%` }}>
-                  <div className="p-8 md:p-10 bg-gray-50 border border-gray-100">
-                    {/* Stars */}
-                    <div className="flex gap-1 mb-6">
-                      {[...Array(5)].map((_, j) => (
-                        <svg key={j} className={`w-5 h-5 ${j < (t.rating || 5) ? "text-amber-400 fill-amber-400" : "text-gray-200 fill-gray-200"}`} viewBox="0 0 24 24">
-                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                        </svg>
-                      ))}
-                    </div>
+              {/* Subtle gradient top bar */}
+              <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${t.gradient} rounded-t-2xl`} />
 
-                    {/* Quote mark */}
-                    <svg className="w-8 h-8 text-orange-200 mb-3" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                    </svg>
+              {/* Quote icon */}
+              <svg className="w-6 h-6 text-orange-200 mb-3" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+              </svg>
 
-                    <blockquote className="text-gray-700 text-lg md:text-xl leading-relaxed mb-8 font-medium">
-                      {t.quote}
-                    </blockquote>
+              {/* Stars */}
+              <StarRating rating={t.rating} />
 
-                    <div className="flex items-center gap-4">
-                      <div className={`w-12 h-12 rounded-full ${t.color} flex items-center justify-center text-white text-sm font-bold font-display flex-shrink-0`}>
-                        {t.initials}
-                      </div>
-                      <div>
-                        <p className="font-semibold text-gray-900">{t.name}</p>
-                        <p className="text-sm text-gray-500">{t.role}</p>
-                      </div>
-                    </div>
-                  </div>
+              {/* Quote */}
+              <p className="text-gray-600 text-sm leading-relaxed mt-3 mb-5">
+                &ldquo;{t.quote}&rdquo;
+              </p>
+
+              {/* Avatar + name */}
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 shadow-md ring-2 ring-white">
+                  {t.avatar}
                 </div>
-              ))}
+                <div>
+                  <p className="text-sm font-semibold text-gray-900">{t.name}</p>
+                  <p className="text-xs text-gray-400">{t.role}{t.company ? `, ${t.company}` : ""}</p>
+                </div>
+              </div>
             </div>
-          </div>
+          ))}
 
-          {/* Prev / Next arrows */}
-          {len > 1 && (
-            <>
-              <button
-                onClick={prev}
-                className="absolute -left-5 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white border border-gray-200 shadow-md flex items-center justify-center text-gray-500 hover:text-orange-500 hover:border-orange-200 transition-colors z-10"
-                aria-label="Previous review"
-              >
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              <button
-                onClick={next}
-                className="absolute -right-5 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white border border-gray-200 shadow-md flex items-center justify-center text-gray-500 hover:text-orange-500 hover:border-orange-200 transition-colors z-10"
-                aria-label="Next review"
-              >
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </>
-          )}
-
-          {/* Dot indicators + progress */}
-          {len > 1 && (
-            <div className="flex justify-center items-center gap-2 mt-6">
-              {activeTestimonials.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setActiveIdx(i)}
-                  className={`h-2 rounded-full transition-all duration-500 ${
-                    i === activeIdx ? "w-7 bg-orange-500" : "w-2 bg-gray-300 hover:bg-gray-400"
-                  }`}
-                  aria-label={`Go to review ${i + 1}`}
-                />
-              ))}
+          {/* DB reviews — same card style with initial avatar */}
+          {extraReviews.map((t, i) => (
+            <div
+              key={t.name + i}
+              className={`animate-on-scroll delay-${(i + 4) * 100} group relative bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all overflow-hidden`}
+            >
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gray-300 to-gray-400 rounded-t-2xl" />
+              <svg className="w-6 h-6 text-orange-200 mb-3" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+              </svg>
+              <StarRating rating={t.rating || 5} />
+              <p className="text-gray-600 text-sm leading-relaxed mt-3 mb-5">&ldquo;{t.quote}&rdquo;</p>
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full flex-shrink-0 shadow-md ring-2 ring-white bg-gradient-to-br from-orange-400 to-rose-500 flex items-center justify-center text-white text-sm font-bold">
+                  {t.initials}
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-gray-900">{t.name}</p>
+                  <p className="text-xs text-gray-400">{t.role}{t.company ? `, ${t.company}` : ""}</p>
+                </div>
+              </div>
             </div>
-          )}
+          ))}
         </div>
       </div>
     </section>

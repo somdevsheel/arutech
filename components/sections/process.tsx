@@ -5,8 +5,8 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 const steps = [
   {
     number: "01",
-    title: "Discovery & Scoping",
-    description: "A structured consultation to understand your goals, constraints, and success criteria. No templates — just honest problem framing.",
+    title: "Discovery",
+    description: "Understand your business goals, audience, and challenges.",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -15,18 +15,18 @@ const steps = [
   },
   {
     number: "02",
-    title: "Architecture & Design",
-    description: "System architecture, data flow diagrams, and UI wireframes are finalized before a single line of production code is written.",
+    title: "Strategy",
+    description: "Develop a customized roadmap aligned with your objectives.",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
       </svg>
     ),
   },
   {
     number: "03",
-    title: "Build & Iterate",
-    description: "Development in focused sprints with regular check-ins. You stay informed. We stay aligned. Changes are handled — not avoided.",
+    title: "Design & Development",
+    description: "Create intuitive digital products using modern technologies and best practices.",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
@@ -35,11 +35,21 @@ const steps = [
   },
   {
     number: "04",
-    title: "Deploy & Maintain",
-    description: "Production deployment with monitoring, documentation, and optional long-term support. We don't disappear after launch.",
+    title: "Testing & Optimization",
+    description: "Ensure flawless performance through rigorous quality assurance and continuous optimization.",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+  },
+  {
+    number: "05",
+    title: "Launch & Growth",
+    description: "Deploy, monitor, market, and continuously improve your digital solution.",
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
       </svg>
     ),
   },
@@ -70,9 +80,9 @@ export default function Process() {
         {/* Steps */}
         <div className="relative">
           {/* Connecting line (desktop) */}
-          <div className="hidden lg:block absolute top-9 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-orange-200 to-transparent" />
+          <div className="hidden lg:block absolute top-9 left-[10%] right-[10%] h-px bg-gradient-to-r from-transparent via-orange-200 to-transparent" />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-4">
             {steps.map((step, i) => (
               <div key={step.number} className={`animate-on-scroll delay-${(i + 1) * 100} relative`}>
                 {/* Icon */}

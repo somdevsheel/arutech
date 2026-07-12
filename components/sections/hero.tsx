@@ -176,9 +176,9 @@ export default function Hero() {
           {/* Stats */}
           <div className="animate-on-scroll delay-400 grid grid-cols-3 gap-8 mt-10 pt-8 border-t border-gray-100 max-w-md mx-auto">
             {[
-              { value: "50+",  label: "Projects Delivered" },
+              { value: "21+",  label: "Projects Delivered" },
               { value: "99%",  label: "Client Satisfaction" },
-              { value: "4+",   label: "Years Experience" },
+              { value: "3+",   label: "Years Experience" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <p className="font-display text-3xl font-bold text-gray-900">{stat.value}</p>

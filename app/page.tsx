@@ -3,6 +3,8 @@ import Navbar from "@/components/navbar";
 import FloatingTab from "@/components/FloatingTab";
 import Hero from "@/components/sections/hero";
 import Services from "@/components/sections/services";
+import WhyChooseUs from "@/components/sections/whychooseus";
+import Industries from "@/components/sections/industries";
 import Trust from "@/components/sections/trust";
 import TechStack from "@/components/sections/techstack";
 import Process from "@/components/sections/process";
@@ -15,9 +17,9 @@ import Footer from "@/components/footer";
 import ChatWidget from "@/components/ChatWidget";
 
 export const metadata: Metadata = {
-  title: "Arutech Consultancy Services LLP | AI, Cloud & Web App Development India",
+  title: "AI Development, App Development & Digital Marketing Agency",
   description:
-    "Arutech Consultancy delivers expert AI/ML solutions, cloud deployment, React web development & React Native mobile apps in India. 50+ projects delivered. Get a free consultation today.",
+    "Grow your business with AI development, mobile apps, website design, automation, Google Ads, SEO, and digital marketing services tailored for measurable results.",
   alternates: {
     canonical: "https://arutechconsultancy.com",
   },
@@ -30,6 +32,8 @@ export default function Home() {
       <FloatingTab />
       <Hero />
       <Services />
+      <WhyChooseUs />
+      <Industries />
       <Trust />
       <TechStack />
       <Process />
