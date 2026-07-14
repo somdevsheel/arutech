@@ -251,17 +251,17 @@ export default function Contact() {
       <div className="absolute inset-0 dot-grid opacity-40" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
           {/* Left: Info */}
           <div>
             <div className="animate-on-scroll inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 border border-orange-200 mb-6">
               <span className="text-xs font-mono text-orange-600 tracking-widest font-semibold uppercase">Get in Touch</span>
             </div>
-            <h2 className="animate-on-scroll delay-100 font-display text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+            <h2 className="animate-on-scroll delay-100 font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
               Let&apos;s Build{" "}
               <span className="gradient-text">Something</span>
             </h2>
-            <p className="animate-on-scroll delay-200 text-gray-600 text-lg leading-relaxed mb-8">
+            <p className="animate-on-scroll delay-200 text-gray-600 text-base sm:text-lg leading-relaxed mb-8">
               Have a project in mind? We&apos;d love to hear about it. Tell us what you&apos;re building and we&apos;ll follow up within 24 hours.
             </p>
 
@@ -326,7 +326,7 @@ export default function Contact() {
           <div className="animate-on-scroll delay-200">
             <form
               onSubmit={handleSubmit}
-              className="bg-white border border-gray-200 rounded-2xl p-7 lg:p-8 shadow-sm"
+              className="bg-white border border-gray-200 rounded-2xl p-5 sm:p-7 lg:p-8 shadow-sm"
             >
               {status === "success" ? (
                 <div className="text-center py-8">

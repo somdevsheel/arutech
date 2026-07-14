@@ -128,7 +128,7 @@ export default function Industries() {
           <div className="animate-on-scroll inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 border border-orange-200 mb-5">
             <span className="text-xs font-mono text-orange-600 tracking-widest font-semibold uppercase">Industries We Serve</span>
           </div>
-          <h2 className="animate-on-scroll delay-100 font-display text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+          <h2 className="animate-on-scroll delay-100 font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
             Helping Businesses{" "}
             <span className="gradient-text">Across Industries</span>
           </h2>

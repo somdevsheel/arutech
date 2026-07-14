@@ -2,78 +2,105 @@ import type { Metadata } from "next";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import FloatingTab from "@/components/FloatingTab";
+import CourseCatalog from "@/components/learning/CourseCatalog";
+import clientPromise from "@/lib/mongodb";
 
 export const metadata: Metadata = {
-  title: "Learning | Arutech Consultancy Services LLP",
-  description: "Free resources, tutorials, and guides on AI, cloud deployment, web development, and digital marketing — from the Arutech team.",
+  title: "Learning Hub | Arutech Consultancy Services",
+  description: "Free and premium courses on AI, web development, mobile apps, and digital marketing — built by engineers who ship to production.",
   alternates: { canonical: "https://arutechconsultancy.com/learning" },
 };
 
-const topics = [
-  { icon: "🤖", label: "AI & Machine Learning", count: "Coming Soon", color: "bg-orange-50 border-orange-200 text-orange-700" },
-  { icon: "☁️", label: "Cloud & DevOps", count: "Coming Soon", color: "bg-sky-50 border-sky-200 text-sky-700" },
-  { icon: "⚛️", label: "React & Next.js", count: "Coming Soon", color: "bg-violet-50 border-violet-200 text-violet-700" },
-  { icon: "📱", label: "React Native", count: "Coming Soon", color: "bg-emerald-50 border-emerald-200 text-emerald-700" },
-  { icon: "📊", label: "Business Analytics", count: "Coming Soon", color: "bg-amber-50 border-amber-200 text-amber-700" },
-  { icon: "📈", label: "Digital Marketing", count: "Coming Soon", color: "bg-rose-50 border-rose-200 text-rose-700" },
-];
+const DB = process.env.MONGODB_DB || "arutechdata";
 
-export default function Learning() {
+async function getCourses(): Promise<Record<string, any>[]> {
+  try {
+    const client = await clientPromise.get();
+    const db = client.db(DB);
+    const courses = await db
+      .collection("courses")
+      .find({ status: "published" })
+      .sort({ createdAt: -1 })
+      .toArray();
+    return courses.map((c) => ({ ...c, _id: c._id.toString() })) as Record<string, any>[];
+  } catch {
+    return [];
+  }
+}
+
+const STAT_ICONS = ["🎓", "🆓", "📂", "🏆"];
+
+export default async function LearningPage() {
+  const courses = await getCourses();
+
+  const freeCount = courses.filter((c) => !c.price || c.price === 0).length;
+  const categories = Array.from(new Set(courses.map((c) => c.category).filter(Boolean))) as string[];
+  const certCount = courses.filter((c) => c.isCertified).length;
+
+  const stats = [
+    { label: "Total Courses", value: courses.length, icon: STAT_ICONS[0] },
+    { label: "Free Courses", value: freeCount, icon: STAT_ICONS[1] },
+    { label: "Categories", value: categories.length, icon: STAT_ICONS[2] },
+    { label: "With Certificate", value: certCount, icon: STAT_ICONS[3] },
+  ];
+
   return (
-    <main className="bg-white">
+    <main className="bg-gray-50 min-h-screen">
       <Navbar />
       <FloatingTab />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 px-6 bg-gradient-to-br from-orange-50 via-white to-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 border border-orange-200 mb-6">
-            <span className="text-xs font-mono text-orange-600 tracking-widest font-semibold uppercase">Learning Hub</span>
+      <section className="relative pt-32 pb-16 px-4 sm:px-6 overflow-hidden bg-gradient-to-b from-white to-gray-50">
+        {/* Background decoration */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-24 -right-24 w-96 h-96 bg-orange-100 rounded-full blur-3xl opacity-50" />
+          <div className="absolute top-1/2 -left-24 w-64 h-64 bg-amber-100 rounded-full blur-3xl opacity-40" />
+        </div>
+
+        <div className="max-w-4xl mx-auto text-center relative">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-50 border border-orange-200 mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse" />
+            <span className="text-xs font-mono text-orange-600 tracking-widest font-semibold uppercase">Arutech Learning Hub</span>
           </div>
-          <h1 className="font-display text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-5 tracking-tight">
-            Learn What We{" "}
-            <span className="text-orange-500">Build With</span>
+
+          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-5 tracking-tight">
+            Level Up With{" "}
+            <span className="text-orange-500">Real Skills</span>
           </h1>
-          <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
-            Free tutorials, guides, and deep-dives from the Arutech team — practical content written by engineers who ship to production.
+
+          <p className="text-base sm:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto mb-8">
+            Practical courses built by engineers and marketers who ship to production — from AI fundamentals to full-stack web apps.
           </p>
+
+          {/* Stats row */}
+          {courses.length > 0 && (
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-2xl mx-auto">
+              {stats.map((s) => (
+                <div key={s.label} className="bg-white border border-gray-100 rounded-2xl px-4 py-4 shadow-sm">
+                  <div className="text-2xl mb-1">{s.icon}</div>
+                  <div className="font-display text-2xl font-bold text-gray-900">{s.value}</div>
+                  <div className="text-xs text-gray-500 mt-0.5">{s.label}</div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
-      {/* Topics */}
-      <section className="py-16 px-6 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-display text-2xl font-bold text-gray-900 mb-8 text-center">Topics we cover</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {topics.map((t) => (
-              <div key={t.label} className={`p-6 rounded-2xl border ${t.color} bg-white hover:shadow-md transition-shadow`}>
-                <div className="text-3xl mb-3">{t.icon}</div>
-                <h3 className="font-display text-base font-bold text-gray-900 mb-1">{t.label}</h3>
-                <span className="text-xs font-medium text-gray-400">{t.count}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Coming soon */}
-      <section className="py-20 px-6 text-center">
-        <div className="max-w-xl mx-auto">
-          <div className="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-5">📚</div>
-          <h2 className="font-display text-3xl font-bold text-gray-900 mb-3">Content is on its way</h2>
-          <p className="text-gray-600 mb-8">
-            We&apos;re building out the learning hub with tutorials, guides, and videos. Subscribe to be notified when new content drops.
-          </p>
-          <div className="flex gap-2 max-w-sm mx-auto">
-            <input
-              type="email"
-              placeholder="your@email.com"
-              className="flex-1 px-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-300"
-            />
-            <button className="px-5 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-xl text-sm transition-all shadow-md shadow-orange-100">
-              Notify Me
-            </button>
-          </div>
+      {/* Catalog or empty state */}
+      <section className="py-10 px-4 sm:px-6 pb-20">
+        <div className="max-w-6xl mx-auto">
+          {courses.length > 0 ? (
+            <CourseCatalog courses={courses as any} categories={categories} />
+          ) : (
+            <div className="text-center py-24">
+              <div className="w-20 h-20 bg-orange-100 rounded-3xl flex items-center justify-center text-4xl mx-auto mb-5">📚</div>
+              <h2 className="font-display text-3xl font-bold text-gray-900 mb-3">Courses Coming Soon</h2>
+              <p className="text-gray-500 max-w-md mx-auto leading-relaxed">
+                We&apos;re building out the learning hub with courses, tutorials, and videos. Check back soon!
+              </p>
+            </div>
+          )}
         </div>
       </section>
 

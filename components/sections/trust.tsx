@@ -216,18 +216,18 @@ export default function Trust() {
           <div className="animate-on-scroll inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 border border-orange-200 mb-5">
             <span className="text-xs font-mono text-orange-600 tracking-widest font-semibold uppercase">Client Feedback</span>
           </div>
-          <h2 className="animate-on-scroll delay-100 font-display text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+          <h2 className="animate-on-scroll delay-100 font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
             Built on{" "}
             <span className="gradient-text">Outcomes</span>
             , Not Hours
           </h2>
-          <p className="animate-on-scroll delay-200 text-gray-600 text-lg leading-relaxed">
+          <p className="animate-on-scroll delay-200 text-gray-600 text-base sm:text-lg leading-relaxed">
             We measure success by what you ship and what stays running — not by the size of our invoice.
           </p>
         </div>
 
         {/* Highlights */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mb-10 sm:mb-12">
           {highlights.map((h, i) => (
             <div
               key={h.title}

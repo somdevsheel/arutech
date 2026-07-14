@@ -47,8 +47,8 @@ export default function Footer() {
       {/* Keywords strip */}
       <div className="border-b border-white/5 py-6">
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-xs text-gray-600 mb-3 font-mono uppercase tracking-widest">What we're known for</p>
-          <div className="flex flex-wrap gap-2">
+          <p className="text-xs text-gray-600 mb-3 font-mono uppercase tracking-widest text-center sm:text-left">What we're known for</p>
+          <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
             {keywords.map((kw) => (
               <span key={kw} className="px-3 py-1 text-xs text-gray-500 bg-white/5 border border-white/8 rounded-full hover:text-gray-300 hover:border-white/20 transition-colors cursor-default">
                 {kw}
@@ -60,7 +60,7 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto px-6">
         {/* Main footer */}
-        <div className="py-14 grid md:grid-cols-2 lg:grid-cols-5 gap-10">
+        <div className="py-10 lg:py-14 grid md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10">
           {/* Brand column */}
           <div className="lg:col-span-2">
             <a href="/" className="flex items-center mb-5 w-fit">

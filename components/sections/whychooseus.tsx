@@ -77,7 +77,7 @@ export default function WhyChooseUs() {
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-20 items-center">
 
           {/* Left — text */}
           <div>
@@ -86,12 +86,12 @@ export default function WhyChooseUs() {
               <span className="text-xs font-mono text-orange-400 tracking-widest uppercase">Why Choose Us</span>
             </div>
 
-            <h2 className="animate-on-scroll delay-100 font-display text-4xl lg:text-5xl font-bold text-white leading-tight mb-5 tracking-tight">
+            <h2 className="animate-on-scroll delay-100 font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-5 tracking-tight">
               Trusted Technology{" "}
               <span className="gradient-text">Partner for Growth</span>
             </h2>
 
-            <p className="animate-on-scroll delay-200 text-gray-400 text-lg leading-relaxed mb-8">
+            <p className="animate-on-scroll delay-200 text-gray-400 text-base sm:text-lg leading-relaxed mb-8">
               Our multidisciplinary team combines software engineering, artificial intelligence, automation, UX design, and performance marketing to create complete digital ecosystems that generate measurable business growth.
             </p>
 
@@ -136,15 +136,15 @@ export default function WhyChooseUs() {
             </div>
 
             {/* Stats strip */}
-            <div className="grid grid-cols-3 gap-4 mt-6 p-5 rounded-2xl bg-white/5 border border-white/10">
+            <div className="grid grid-cols-3 gap-3 mt-6 p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10">
               {[
                 { value: "21+", label: "Projects Delivered" },
                 { value: "99%", label: "Client Satisfaction" },
                 { value: "3+",  label: "Years of Expertise" },
               ].map((s) => (
                 <div key={s.label} className="text-center">
-                  <p className="font-display text-2xl font-bold text-white">{s.value}</p>
-                  <p className="text-xs text-gray-500 mt-0.5">{s.label}</p>
+                  <p className="font-display text-xl sm:text-2xl font-bold text-white">{s.value}</p>
+                  <p className="text-[10px] sm:text-xs text-gray-500 mt-0.5 leading-tight">{s.label}</p>
                 </div>
               ))}
             </div>

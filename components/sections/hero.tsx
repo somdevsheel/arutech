@@ -55,14 +55,14 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
         <div className="text-center max-w-4xl mx-auto">
           {/* Badge */}
-          <div className="animate-on-scroll inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 border border-orange-200 mb-8">
-            <span className="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse-slow" />
-            <span className="text-xs font-mono text-orange-600 tracking-widest font-semibold uppercase">
+          <div className="animate-on-scroll inline-flex items-center gap-2 px-3 py-2 rounded-full bg-orange-100 border border-orange-200 mb-8 max-w-full">
+            <span className="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse-slow flex-shrink-0" />
+            <span className="text-[10px] sm:text-xs font-mono text-orange-600 tracking-wider sm:tracking-widest font-semibold uppercase">
               AI · Cloud · Web · Mobile · PPC · DM
             </span>
           </div>
 
-          <h1 className="animate-on-scroll delay-100 font-display text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-[1.05] tracking-tight mb-6">
+          <h1 className="animate-on-scroll delay-100 font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-[1.05] tracking-tight mb-6">
             Build Smarter.
             <br />
             <span className="gradient-text">Grow Faster.</span>
@@ -70,7 +70,7 @@ export default function Hero() {
             Scale Further.
           </h1>
 
-          <p className="animate-on-scroll delay-200 text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto mb-10">
+          <p className="animate-on-scroll delay-200 text-base sm:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto mb-10">
             Get a <strong className="text-gray-900 font-semibold">free analysis</strong> of your
             business's digital presence — we'll identify exactly where you're leaving growth on the table.
           </p>
@@ -174,15 +174,15 @@ export default function Hero() {
           </div>
 
           {/* Stats */}
-          <div className="animate-on-scroll delay-400 grid grid-cols-3 gap-8 mt-10 pt-8 border-t border-gray-100 max-w-md mx-auto">
+          <div className="animate-on-scroll delay-400 grid grid-cols-3 gap-4 sm:gap-8 mt-10 pt-8 border-t border-gray-100 max-w-md mx-auto">
             {[
               { value: "21+",  label: "Projects Delivered" },
               { value: "99%",  label: "Client Satisfaction" },
               { value: "3+",   label: "Years Experience" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
-                <p className="font-display text-3xl font-bold text-gray-900">{stat.value}</p>
-                <p className="text-xs text-gray-500 mt-1">{stat.label}</p>
+                <p className="font-display text-2xl sm:text-3xl font-bold text-gray-900">{stat.value}</p>
+                <p className="text-xs text-gray-500 mt-1 leading-tight">{stat.label}</p>
               </div>
             ))}
           </div>

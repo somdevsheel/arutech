@@ -68,11 +68,11 @@ export default function Process() {
           <div className="animate-on-scroll inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 border border-orange-200 mb-5">
             <span className="text-xs font-mono text-orange-600 tracking-widest font-semibold uppercase">Our Approach</span>
           </div>
-          <h2 className="animate-on-scroll delay-100 font-display text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+          <h2 className="animate-on-scroll delay-100 font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
             A Process That{" "}
             <span className="gradient-text">Delivers</span>
           </h2>
-          <p className="animate-on-scroll delay-200 text-gray-600 text-lg leading-relaxed">
+          <p className="animate-on-scroll delay-200 text-gray-600 text-base sm:text-lg leading-relaxed">
             Every project follows a structured workflow designed to minimise surprises and maximise outcomes.
           </p>
         </div>
@@ -82,13 +82,13 @@ export default function Process() {
           {/* Connecting line (desktop) */}
           <div className="hidden lg:block absolute top-9 left-[10%] right-[10%] h-px bg-gradient-to-r from-transparent via-orange-200 to-transparent" />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-4">
             {steps.map((step, i) => (
-              <div key={step.number} className={`animate-on-scroll delay-${(i + 1) * 100} relative`}>
+              <div key={step.number} className={`animate-on-scroll delay-${(i + 1) * 100} relative flex sm:flex-col gap-4 sm:gap-0`}>
                 {/* Icon */}
-                <div className="flex lg:justify-center mb-5 lg:mb-6">
+                <div className="flex lg:justify-center mb-0 sm:mb-5 lg:mb-6 flex-shrink-0">
                   <div className="relative">
-                    <div className="w-16 h-16 rounded-2xl bg-white border border-gray-200 shadow-sm flex items-center justify-center text-orange-500">
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white border border-gray-200 shadow-sm flex items-center justify-center text-orange-500">
                       {step.icon}
                     </div>
                     <span className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-orange-500 text-white text-[10px] font-mono font-bold flex items-center justify-center">
@@ -97,9 +97,9 @@ export default function Process() {
                   </div>
                 </div>
 
-                <div className="lg:text-center">
+                <div className="lg:text-center pt-1 sm:pt-0">
                   <div className="font-mono text-xs text-orange-400 font-semibold mb-1">{step.number}</div>
-                  <h3 className="font-display text-lg font-semibold text-gray-900 mb-2">{step.title}</h3>
+                  <h3 className="font-display text-base sm:text-lg font-semibold text-gray-900 mb-1 sm:mb-2">{step.title}</h3>
                   <p className="text-gray-500 text-sm leading-relaxed">{step.description}</p>
                 </div>
               </div>

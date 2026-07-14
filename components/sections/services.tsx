@@ -123,11 +123,11 @@ export default function Services() {
           <div className="animate-on-scroll inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 border border-orange-200 mb-5">
             <span className="text-xs font-mono text-orange-600 tracking-widest font-semibold uppercase">Who We Can Help</span>
           </div>
-          <h2 className="animate-on-scroll delay-100 font-display text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+          <h2 className="animate-on-scroll delay-100 font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
             Build Smarter Digital Experiences with{" "}
             <span className="gradient-text">AI, Apps & Performance Marketing</span>
           </h2>
-          <p className="animate-on-scroll delay-200 text-gray-600 text-lg leading-relaxed">
+          <p className="animate-on-scroll delay-200 text-gray-600 text-base sm:text-lg leading-relaxed">
             <strong className="text-gray-800">Let&apos;s Build Your Next Big Idea!</strong> Transform your ideas into scalable digital solutions with a team that combines cutting-edge technology and data-driven marketing. From custom mobile applications and AI-powered automation to high-converting websites, Google Ads, SEO, and social media marketing, we help businesses launch, grow, and outperform the competition.
           </p>
         </div>
@@ -166,11 +166,11 @@ export default function Services() {
         </div>
 
         {/* Featured CTA banner */}
-        <div className="animate-on-scroll delay-400 rounded-2xl bg-gradient-to-r from-orange-500 to-amber-500 p-10 lg:p-14 text-center">
-          <h3 className="font-display text-2xl lg:text-3xl font-bold text-white mb-3">
+        <div className="animate-on-scroll delay-400 rounded-2xl bg-gradient-to-r from-orange-500 to-amber-500 p-6 sm:p-10 lg:p-14 text-center">
+          <h3 className="font-display text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-3">
             Ready to Build, Automate &amp; Grow?
           </h3>
-          <p className="text-orange-100 text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-orange-100 text-sm sm:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto">
             Whether you need a custom mobile application, an AI-powered business solution, a high-performing website, or a marketing strategy that delivers measurable ROI, our experts are ready to help.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">

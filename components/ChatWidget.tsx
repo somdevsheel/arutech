@@ -62,11 +62,13 @@ export default function ChatWidget() {
   }
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+    <div className="fixed bottom-4 right-3 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end gap-3">
       {/* Chat panel */}
       {open && (
-        <div className="w-80 sm:w-96 bg-white rounded-2xl shadow-2xl shadow-gray-900/20 border border-gray-200 flex flex-col overflow-hidden"
-          style={{ height: "460px" }}>
+        <div
+          className="bg-white rounded-2xl shadow-2xl shadow-gray-900/20 border border-gray-200 flex flex-col overflow-hidden"
+          style={{ width: "min(320px, calc(100vw - 24px))", height: "min(460px, calc(100dvh - 100px))" }}
+        >
           {/* Header */}
           <div className="flex items-center gap-3 px-4 py-3.5 bg-gradient-to-r from-orange-500 to-amber-500 flex-shrink-0">
             <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">

@@ -1,31 +1,47 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import FloatingTab from "@/components/FloatingTab";
+import clientPromise from "@/lib/mongodb";
 
 export const metadata: Metadata = {
-  title: "Blog | Arutech Consultancy Services LLP",
-  description: "Insights on AI, cloud infrastructure, web development, digital marketing, and software engineering from the Arutech team.",
+  title: "Blog | Arutech Consultancy Services",
+  description: "Insights on AI, web development, mobile apps, digital marketing, and business strategy from the Arutech team.",
   alternates: { canonical: "https://arutechconsultancy.com/blog" },
 };
 
-const upcoming = [
-  { title: "How We Build AI Pipelines That Actually Work in Production", tag: "AI / ML" },
-  { title: "React Native vs Flutter in 2026: Our Honest Take After 10+ Projects", tag: "Mobile" },
-  { title: "The 5-Stage Marketing Funnel We Build for Every Client", tag: "Marketing" },
-  { title: "Cloud Cost Optimisation: What We Learned From 20 Deployments", tag: "Cloud" },
-  { title: "Next.js App Router for Agencies: When It Shines, When It Doesn't", tag: "Web Dev" },
-  { title: "Free Business Analysis: What We Look For in Your Digital Presence", tag: "Strategy" },
-];
+const DB = process.env.MONGODB_DB || "arutechdata";
 
-export default function Blog() {
+async function getPosts(): Promise<Record<string, any>[]> {
+  try {
+    const client = await clientPromise.get();
+    const db = client.db(DB);
+    const posts = await db
+      .collection("blog_posts")
+      .find({ status: "published" })
+      .sort({ createdAt: -1 })
+      .toArray();
+    return posts.map((p) => ({ ...p, _id: p._id.toString() })) as Record<string, any>[];
+  } catch {
+    return [];
+  }
+}
+
+function formatDate(s: string) {
+  return new Date(s).toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" });
+}
+
+export default async function Blog() {
+  const posts = await getPosts();
+
   return (
     <main className="bg-white">
       <Navbar />
       <FloatingTab />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 px-6 bg-gradient-to-br from-orange-50 via-white to-white">
+      <section className="pt-32 pb-14 px-6 bg-gradient-to-br from-orange-50 via-white to-white">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 border border-orange-200 mb-6">
             <span className="text-xs font-mono text-orange-600 tracking-widest font-semibold uppercase">Blog</span>
@@ -40,45 +56,54 @@ export default function Blog() {
         </div>
       </section>
 
-      {/* Coming soon */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-100 text-amber-700 rounded-full border border-amber-200 text-xs font-semibold font-mono uppercase tracking-widest mb-4">
-            ● Coming Soon
-          </div>
-          <h2 className="font-display text-3xl font-bold text-gray-900 mb-3">Articles in the pipeline</h2>
-          <p className="text-gray-500">We&apos;re writing. Be the first to read it — subscribe below.</p>
-        </div>
-
-        <div className="max-w-2xl mx-auto space-y-4">
-          {upcoming.map((post) => (
-            <div key={post.title} className="flex items-center gap-4 p-5 bg-gray-50 border border-gray-100 rounded-xl">
-              <div className="w-2 h-2 rounded-full bg-orange-300 flex-shrink-0" />
-              <div className="flex-1">
-                <p className="text-sm font-medium text-gray-800">{post.title}</p>
-              </div>
-              <span className="text-xs font-medium text-gray-400 bg-gray-100 px-2.5 py-1 rounded-full flex-shrink-0">
-                {post.tag}
-              </span>
+      {posts.length > 0 ? (
+        <section className="py-14 px-6 bg-gray-50">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {posts.map((post) => (
+                <Link
+                  key={post._id}
+                  href={`/blog/${post.slug}`}
+                  className="group bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-lg hover:border-orange-200 transition-all duration-300"
+                >
+                  {post.thumbnail ? (
+                    <div className="aspect-video bg-gray-100 overflow-hidden">
+                      <img src={post.thumbnail} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+                  ) : (
+                    <div className="aspect-video bg-gradient-to-br from-orange-100 to-amber-50 flex items-center justify-center">
+                      <span className="text-5xl">✍️</span>
+                    </div>
+                  )}
+                  <div className="p-5">
+                    {post.category && (
+                      <span className="text-xs font-semibold text-orange-600 uppercase tracking-widest">{post.category}</span>
+                    )}
+                    <h2 className="font-display text-base font-bold text-gray-900 mt-1 mb-2 line-clamp-2 group-hover:text-orange-600 transition-colors">
+                      {post.title}
+                    </h2>
+                    {post.excerpt && (
+                      <p className="text-sm text-gray-500 line-clamp-2 mb-4">{post.excerpt}</p>
+                    )}
+                    <div className="flex items-center justify-between text-xs text-gray-400">
+                      <span>{post.author || "Arutech Team"}</span>
+                      {post.createdAt && <span>{formatDate(post.createdAt)}</span>}
+                    </div>
+                  </div>
+                </Link>
+              ))}
             </div>
-          ))}
-        </div>
-
-        {/* Subscribe */}
-        <div className="max-w-md mx-auto mt-12 text-center">
-          <h3 className="font-display text-xl font-bold text-gray-900 mb-3">Get notified when we publish</h3>
-          <div className="flex gap-2">
-            <input
-              type="email"
-              placeholder="your@email.com"
-              className="flex-1 px-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-300 focus:border-orange-400"
-            />
-            <button className="px-5 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-xl text-sm transition-all shadow-md shadow-orange-100">
-              Notify Me
-            </button>
           </div>
-        </div>
-      </section>
+        </section>
+      ) : (
+        <section className="py-20 px-6 text-center">
+          <div className="max-w-xl mx-auto">
+            <div className="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-5">✍️</div>
+            <h2 className="font-display text-3xl font-bold text-gray-900 mb-3">Articles are on their way</h2>
+            <p className="text-gray-600">We&apos;re writing practical content on AI, apps, and digital growth. Check back soon!</p>
+          </div>
+        </section>
+      )}
 
       <Footer />
     </main>
