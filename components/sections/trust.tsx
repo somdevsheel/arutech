@@ -105,30 +105,44 @@ const testimonials = [
     gradient: "from-violet-400 to-purple-600",
     avatar: (
       <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="40" cy="40" r="40" fill="url(#g2)" />
+        <circle cx="40" cy="40" r="40" fill="url(#gf)" />
         <defs>
-          <radialGradient id="g2" cx="30%" cy="30%">
-            <stop offset="0%" stopColor="#A78BFA" />
+          <radialGradient id="gf" cx="30%" cy="30%">
+            <stop offset="0%" stopColor="#C4B5FD" />
             <stop offset="100%" stopColor="#7C3AED" />
           </radialGradient>
         </defs>
+        {/* Long hair back layer */}
+        <path d="M25 28 Q22 42 24 60 Q30 66 40 67 Q50 66 56 60 Q58 42 55 28 Q50 18 40 17 Q30 18 25 28Z" fill="#3B1D8A" />
         {/* Head */}
-        <circle cx="40" cy="30" r="13" fill="#FDDCB5" />
-        {/* Creative wavy hair */}
-        <path d="M27 24 Q29 12 40 13 Q51 12 53 24 Q50 16 45 17 Q42 13 40 15 Q38 13 35 17 Q30 16 27 24Z" fill="#7C3AED" />
-        {/* Side hair streaks */}
-        <path d="M27 24 Q25 28 27 32" stroke="#A78BFA" strokeWidth="2" strokeLinecap="round" fill="none" />
-        <path d="M53 24 Q55 28 53 32" stroke="#A78BFA" strokeWidth="2" strokeLinecap="round" fill="none" />
+        <circle cx="40" cy="31" r="13" fill="#FDDCB5" />
+        {/* Hair top */}
+        <path d="M27 27 Q28 14 40 13 Q52 14 53 27 Q49 19 40 19 Q31 19 27 27Z" fill="#3B1D8A" />
+        {/* Side swept hair left */}
+        <path d="M27 27 Q23 31 24 38 Q26 35 28 33Z" fill="#3B1D8A" />
+        {/* Side swept hair right */}
+        <path d="M53 27 Q57 31 56 38 Q54 35 52 33Z" fill="#3B1D8A" />
+        {/* Eyelashes left */}
+        <path d="M33 27 Q33.5 25.5 35 26" stroke="#1E293B" strokeWidth="1" strokeLinecap="round" fill="none" />
         {/* Eyes */}
-        <ellipse cx="35" cy="29" rx="2.5" ry="2.5" fill="#1E293B" />
-        <ellipse cx="45" cy="29" rx="2.5" ry="2.5" fill="#1E293B" />
-        <circle cx="36" cy="28" r="0.8" fill="white" />
-        <circle cx="46" cy="28" r="0.8" fill="white" />
-        {/* Smile */}
-        <path d="M35 36 Q40 41 45 36" stroke="#92400E" strokeWidth="1.5" strokeLinecap="round" fill="none" />
-        {/* Creative hoodie */}
-        <path d="M20 68 Q25 54 40 52 Q55 54 60 68Z" fill="#4C1D95" />
-        <path d="M36 52 Q40 56 44 52 Q42 60 40 63 Q38 60 36 52Z" fill="#6D28D9" />
+        <ellipse cx="35" cy="29" rx="2.2" ry="2.2" fill="#1E293B" />
+        <ellipse cx="45" cy="29" rx="2.2" ry="2.2" fill="#1E293B" />
+        <circle cx="35.8" cy="28.2" r="0.7" fill="white" />
+        <circle cx="45.8" cy="28.2" r="0.7" fill="white" />
+        {/* Eyelashes right */}
+        <path d="M47 27 Q47.5 25.5 45 26" stroke="#1E293B" strokeWidth="1" strokeLinecap="round" fill="none" />
+        {/* Nose */}
+        <path d="M39 32 Q40 34 41 32" stroke="#D4A574" strokeWidth="1" strokeLinecap="round" fill="none" />
+        {/* Lips */}
+        <path d="M36.5 36.5 Q40 38.5 43.5 36.5" stroke="#E07070" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+        <path d="M36.5 36.5 Q40 35.5 43.5 36.5" stroke="#E07070" strokeWidth="1" strokeLinecap="round" fill="none" />
+        {/* Top — purple top/blouse */}
+        <path d="M22 68 Q26 54 40 52 Q54 54 58 68Z" fill="#6D28D9" />
+        {/* Collar detail */}
+        <path d="M36 52 Q40 55 44 52" stroke="#A78BFA" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+        {/* Small earrings */}
+        <circle cx="27" cy="33" r="1.5" fill="#C4B5FD" />
+        <circle cx="53" cy="33" r="1.5" fill="#C4B5FD" />
       </svg>
     ),
     rating: 5,
