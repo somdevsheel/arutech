@@ -275,7 +275,7 @@ export default function Trust() {
               <StarRating rating={t.rating} />
 
               {/* Quote */}
-              <p className="text-gray-600 text-sm leading-relaxed mt-3 mb-5">
+              <p className="text-gray-600 text-sm leading-relaxed mt-3 mb-5 text-justify">
                 &ldquo;{t.quote}&rdquo;
               </p>
 
@@ -303,7 +303,7 @@ export default function Trust() {
                 <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
               </svg>
               <StarRating rating={t.rating || 5} />
-              <p className="text-gray-600 text-sm leading-relaxed mt-3 mb-5">&ldquo;{t.quote}&rdquo;</p>
+              <p className="text-gray-600 text-sm leading-relaxed mt-3 mb-5 text-justify">&ldquo;{t.quote}&rdquo;</p>
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-full flex-shrink-0 shadow-md ring-2 ring-white bg-gradient-to-br from-orange-400 to-rose-500 flex items-center justify-center text-white text-sm font-bold">
                   {t.initials}

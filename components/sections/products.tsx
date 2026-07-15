@@ -66,17 +66,28 @@ export default function Products() {
                   <span key={tag} className="px-2.5 py-1 text-xs text-gray-500 bg-gray-100 rounded-lg">{tag}</span>
                 ))}
               </div>
-              <a
-                href="https://freenoo.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-3 bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold rounded-xl transition-all shadow-md shadow-orange-200 hover:shadow-orange-300 hover:-translate-y-0.5 w-fit"
-              >
-                Open Freenoo
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </a>
+              <div className="flex items-center gap-4 flex-wrap">
+                <a
+                  href="https://freenoo.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-3 bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold rounded-xl transition-all shadow-md shadow-orange-200 hover:shadow-orange-300 hover:-translate-y-0.5 w-fit"
+                >
+                  Open Freenoo
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+                <a
+                  href="/projects"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-orange-500 hover:text-orange-600 hover:underline transition-all"
+                >
+                  Know more
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+              </div>
             </div>
             <div className="p-6 lg:p-8 flex items-center">
               <div className="w-full">
@@ -123,11 +134,20 @@ export default function Products() {
                   </div>
                 ))}
               </div>
-              <div className="flex flex-wrap gap-2 text-xs text-gray-500">
+              <div className="flex flex-wrap gap-2 text-xs text-gray-500 mb-5">
                 <span className="px-2.5 py-1 bg-gray-100 rounded-lg">React Native</span>
                 <span className="px-2.5 py-1 bg-gray-100 rounded-lg">Node.js</span>
                 <span className="px-2.5 py-1 bg-gray-100 rounded-lg">Android</span>
               </div>
+              <a
+                href="/projects"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-pink-500 hover:text-pink-600 hover:underline transition-all"
+              >
+                Know more
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
             </div>
           </div>
 
@@ -146,11 +166,20 @@ export default function Products() {
               <p className="text-gray-500 text-xs leading-relaxed mb-4">
                 AI-native financial intelligence platform for individuals and teams who need clarity in complex financial data.
               </p>
-              <div className="flex flex-wrap gap-1.5">
+              <div className="flex flex-wrap gap-1.5 mb-4">
                 {["Financial AI", "Terminal UI", "Intelligence"].map((tag) => (
                   <span key={tag} className="px-2 py-1 text-[10px] text-gray-500 bg-gray-100 rounded-lg">{tag}</span>
                 ))}
               </div>
+              <a
+                href="/projects"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-violet-500 hover:text-violet-600 hover:underline transition-all"
+              >
+                Know more
+                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
             </div>
 
             <div className="animate-on-scroll delay-400 card-hover flex-1 relative rounded-2xl p-6 bg-gray-50 border border-gray-200 shadow-sm hover:shadow-md transition-all">
@@ -163,9 +192,18 @@ export default function Products() {
                 <span className="px-2 py-1 text-[10px] font-semibold bg-gray-200 text-gray-500 border border-gray-300 rounded-full">IN DEVELOPMENT</span>
               </div>
               <h3 className="font-display text-xl font-bold text-gray-700 mb-1.5">Future AI Platform</h3>
-              <p className="text-gray-400 text-xs leading-relaxed">
+              <p className="text-gray-400 text-xs leading-relaxed mb-4">
                 A platform that rethinks how teams interact with AI infrastructure. Details shared when the time is right.
               </p>
+              <a
+                href="/projects"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-orange-500 hover:text-orange-600 hover:underline transition-all"
+              >
+                Know more
+                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
             </div>
           </div>
         </div>

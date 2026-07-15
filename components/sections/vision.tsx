@@ -24,7 +24,7 @@ export default function Vision() {
           <span className="gradient-text">Thinkable!</span>
         </h2>
 
-        <p className="animate-on-scroll delay-200 text-gray-400 text-lg lg:text-xl leading-relaxed max-w-2xl mx-auto mb-10">
+        <p className="animate-on-scroll delay-200 text-gray-400 text-lg lg:text-xl leading-relaxed max-w-2xl mx-auto mb-10 text-justify">
           We help businesses transform ambitious ideas into intelligent digital products — through custom software, AI solutions, web and mobile development, workflow automation, and digital transformation.
           <span className="block mt-3">Our mission is to build scalable technology that solves today&apos;s challenges while preparing organizations for tomorrow&apos;s opportunities.</span>
         </p>

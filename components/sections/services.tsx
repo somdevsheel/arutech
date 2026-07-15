@@ -112,7 +112,7 @@ export default function Services() {
             Build Smarter Digital Experiences with{" "}
             <span className="gradient-text">AI, Apps & Performance Marketing</span>
           </h2>
-          <p className="animate-on-scroll delay-200 text-gray-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+          <p className="animate-on-scroll delay-200 text-gray-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto text-justify">
             Transform your ideas into scalable digital solutions with a team that combines cutting-edge technology and data-driven marketing — from custom mobile applications and AI-powered automation to high-converting websites, Google Ads, SEO, and social media marketing.
           </p>
         </div>
@@ -128,7 +128,7 @@ export default function Services() {
                 {service.icon}
               </div>
               <h3 className="font-display text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-5">{service.description}</p>
+              <p className="text-gray-600 text-sm leading-relaxed mb-5 text-justify">{service.description}</p>
               <div className="flex flex-wrap gap-2 mb-6">
                 {service.tags.map((tag) => (
                   <span key={tag} className="px-2.5 py-1 text-xs font-medium text-gray-500 bg-gray-100 rounded-lg">

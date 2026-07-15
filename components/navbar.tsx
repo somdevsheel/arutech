@@ -9,7 +9,7 @@ import ThemeToggle from "./theme-toggle";
 const navLinks = [
   { href: "/",          section: "services",  label: "Services" },
   { href: "/",          section: "products",  label: "Products" },
-  { href: "/projects",  section: null,        label: "Projects" },
+  { href: "/",          section: "products",  label: "Projects" },
   // { href: "/learning",  section: null,        label: "Learning" },  // hidden — enable when ready
   { href: "/about-us",  section: null,        label: "About Us" },
   // { href: "/blog",      section: null,        label: "Blog" },       // hidden — enable when ready
