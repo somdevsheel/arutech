@@ -6,7 +6,7 @@ import FloatingTab from "@/components/FloatingTab";
 export const metadata: Metadata = {
   title: "About Us | Arutech Consultancy Services LLP",
   description:
-    "Learn about Arutech Consultancy — our story, mission, values, and the senior team behind 50+ delivered projects in AI, Cloud, Web, and Mobile development.",
+    "Founded in March 2025, Arutech Consultancy Services LLP has delivered 21+ projects in AI, Mobile Apps, Web Development, Automation, Google Ads and Digital Marketing across India.",
   alternates: { canonical: "https://arutechconsultancy.com/about-us" },
 };
 
@@ -18,12 +18,12 @@ const values = [
 ];
 
 const milestones = [
-  { year: "2020", label: "Founded", desc: "Arutech Consultancy Services LLP established in India" },
-  { year: "2021", label: "10 Projects", desc: "First 10 client engagements across web and mobile" },
-  { year: "2022", label: "AI Practice", desc: "Launched dedicated AI/ML services and data pipeline work" },
-  { year: "2023", label: "Freenoo Live", desc: "Shipped Freenoo — 25+ free PDF tools, thousands of users" },
-  { year: "2024", label: "50+ Projects", desc: "Crossed 50 delivered projects across 4 service verticals" },
-  { year: "2026", label: "Expanding", desc: "Adding Digital Marketing and Business Analytics practices" },
+  { year: "Mar 2025", label: "Founded", desc: "Arutech Consultancy Services LLP officially registered in India" },
+  { year: "Apr 2025", label: "First Projects", desc: "Onboarded first clients across web design, mobile and digital marketing" },
+  { year: "Late 2025", label: "Full-Service Agency", desc: "Added Google Ads, SEO, Social Media Marketing & AI Automation services" },
+  { year: "Mar 2026", label: "Freenoo Live", desc: "Shipped Freenoo — 25+ free PDF tools, live at freenoo.com" },
+  { year: "2026", label: "21+ Projects", desc: "21+ projects delivered across 6 service verticals with 99% satisfaction" },
+  { year: "Now", label: "Scaling Up", desc: "Expanding into AI Agents, LLMs and enterprise-grade automation solutions" },
 ];
 
 export default function AboutUs() {
@@ -39,11 +39,11 @@ export default function AboutUs() {
             <span className="text-xs font-mono text-orange-600 tracking-widest font-semibold uppercase">About Us</span>
           </div>
           <h1 className="font-display text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6 tracking-tight">
-            We Build Software That{" "}
-            <span className="text-orange-500">Stays Valuable</span>
+            Build Smarter.{" "}
+            <span className="text-orange-500">Grow Faster.</span>
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
-            Arutech Consultancy Services LLP is an India-based software consultancy specialising in AI, Cloud, Web, and Mobile solutions — built to perform in the real world.
+            Arutech Consultancy Services LLP is an India-based digital consultancy specialising in AI, Mobile Apps, Web Development, Automation, Google Ads, SEO and Social Media Marketing — built to deliver measurable business results.
           </p>
         </div>
       </section>
@@ -54,20 +54,20 @@ export default function AboutUs() {
           <div>
             <span className="text-xs font-mono text-orange-500 uppercase tracking-widest font-semibold">Our Mission</span>
             <h2 className="font-display text-4xl font-bold text-gray-900 mt-3 mb-5 leading-tight">
-              Intelligent software for businesses that need to move fast.
+              Smarter digital solutions for businesses that want to grow fast.
             </h2>
             <p className="text-gray-600 text-lg leading-relaxed mb-5">
-              We design and deliver high-performance software systems — from AI-powered pipelines and cloud infrastructure to production-grade web and mobile applications and marketing funnels that convert.
+              We design and deliver complete digital ecosystems — from custom mobile apps and AI-powered automation to high-converting websites, Google Ads campaigns, SEO, and social media marketing that drives real results.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              Our clients are founders, product teams, and business owners who need a reliable technical partner — not just a vendor. We work as an extension of your team and measure our success by yours.
+              Our clients are founders, product teams, and business owners who need a reliable partner — not just a vendor. We work as an extension of your team and measure our success by yours.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-4">
             {[
-              { value: "50+", label: "Projects Delivered" },
+              { value: "21+", label: "Projects Delivered" },
               { value: "99%", label: "Client Satisfaction" },
-              { value: "4+",  label: "Years of Experience" },
+              { value: "3+",  label: "Years of Experience" },
               { value: "6",   label: "Service Verticals" },
             ].map((stat) => (
               <div key={stat.label} className="bg-orange-50 border border-orange-100 rounded-2xl p-6 text-center">
