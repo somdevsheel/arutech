@@ -79,7 +79,8 @@ export default function Products() {
                   </svg>
                 </a>
                 <a
-                  href="/projects"
+                  href="/"
+                  onClick={(e) => { e.preventDefault(); document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" }); }}
                   className="inline-flex items-center gap-1.5 text-sm font-semibold text-orange-500 hover:text-orange-600 hover:underline transition-all"
                 >
                   Know more
@@ -95,6 +96,21 @@ export default function Products() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Know more — scroll to portfolio section on same page */}
+        <div className="animate-on-scroll delay-100 flex items-center justify-between mb-6 px-1">
+          <p className="text-gray-500 text-sm">Explore the client projects we&apos;ve delivered.</p>
+          <a
+            href="/"
+            onClick={(e) => { e.preventDefault(); document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" }); }}
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-gray-900 hover:bg-gray-800 text-white text-sm font-semibold rounded-xl transition-all hover:-translate-y-0.5 shadow-sm flex-shrink-0"
+          >
+            Know more
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
         </div>
 
         {/* Instachat + coming soon row */}
@@ -140,7 +156,8 @@ export default function Products() {
                 <span className="px-2.5 py-1 bg-gray-100 rounded-lg">Android</span>
               </div>
               <a
-                href="/projects"
+                href="/"
+                onClick={(e) => { e.preventDefault(); document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" }); }}
                 className="inline-flex items-center gap-1.5 text-sm font-semibold text-pink-500 hover:text-pink-600 hover:underline transition-all"
               >
                 Know more
@@ -172,7 +189,8 @@ export default function Products() {
                 ))}
               </div>
               <a
-                href="/projects"
+                href="/"
+                onClick={(e) => { e.preventDefault(); document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" }); }}
                 className="inline-flex items-center gap-1.5 text-xs font-semibold text-violet-500 hover:text-violet-600 hover:underline transition-all"
               >
                 Know more
@@ -196,7 +214,8 @@ export default function Products() {
                 A platform that rethinks how teams interact with AI infrastructure. Details shared when the time is right.
               </p>
               <a
-                href="/projects"
+                href="/"
+                onClick={(e) => { e.preventDefault(); document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" }); }}
                 className="inline-flex items-center gap-1.5 text-xs font-semibold text-orange-500 hover:text-orange-600 hover:underline transition-all"
               >
                 Know more
