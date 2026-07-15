@@ -71,8 +71,7 @@ export default function Hero() {
           </h1>
 
           <p className="animate-on-scroll delay-200 text-base sm:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto mb-10">
-            Get a <strong className="text-gray-900 font-semibold">free analysis</strong> of your
-            business's digital presence — we'll identify exactly where you're leaving growth on the table.
+            Whether you're a startup validating an idea, an established business modernizing operations, or an enterprise embracing AI.
           </p>
 
           {/* Lead capture form — thank-you overlays on success, both use opacity+transform only */}
