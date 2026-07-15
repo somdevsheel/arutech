@@ -81,28 +81,13 @@ const services = [
   {
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
-      </svg>
-    ),
-    title: "Social Media Marketing",
-    description: "Build meaningful customer relationships through strategic content creation, community management, paid advertising, and platform-specific campaigns across Facebook, Instagram, LinkedIn, and more.",
-    tags: ["Meta Ads", "Content Creation", "Community Management"],
-    cta: "Grow My Social",
-    color: "text-sky-500",
-    bg: "bg-sky-50",
-    hoverBorder: "hover:border-sky-200",
-    hoverShadow: "hover:shadow-sky-50",
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
       </svg>
     ),
-    title: "Digital Marketing & SEO",
-    description: "Increase visibility, generate qualified leads, and grow your online presence through consumer focused SEO, content marketing, local SEO, technical optimization, and integrated digital marketing strategies.",
-    tags: ["SEO & Local SEO", "Content Marketing", "Lead Generation"],
-    cta: "Grow My Traffic",
+    title: "Social Media Marketing, Digital Marketing & SEO",
+    description: "Expand your online presence with strategic Social Media Marketing, performance-driven Digital Marketing, and expert SEO services. From engaging content creation, community management, and paid social campaigns to keyword research, technical SEO, local SEO, and content marketing.",
+    tags: ["Meta Ads", "Content Creation", "SEO & Local SEO", "Content Marketing", "Lead Generation"],
+    cta: "Grow My Presence",
     color: "text-rose-500",
     bg: "bg-rose-50",
     hoverBorder: "hover:border-rose-200",
@@ -127,8 +112,8 @@ export default function Services() {
             Build Smarter Digital Experiences with{" "}
             <span className="gradient-text">AI, Apps & Performance Marketing</span>
           </h2>
-          <p className="animate-on-scroll delay-200 text-gray-600 text-base sm:text-lg leading-relaxed">
-            <strong className="text-gray-800">Let&apos;s Build Your Next Big Idea!</strong> Transform your ideas into scalable digital solutions with a team that combines cutting-edge technology and data-driven marketing. From custom mobile applications and AI-powered automation to high-converting websites, Google Ads, SEO, and social media marketing, we help businesses launch, grow, and outperform the competition.
+          <p className="animate-on-scroll delay-200 text-gray-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+            Transform your ideas into scalable digital solutions with a team that combines cutting-edge technology and data-driven marketing — from custom mobile applications and AI-powered automation to high-converting websites, Google Ads, SEO, and social media marketing.
           </p>
         </div>
 

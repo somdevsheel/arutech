@@ -73,7 +73,7 @@ export default function Process() {
             <span className="gradient-text">Delivers</span>
           </h2>
           <p className="animate-on-scroll delay-200 text-gray-600 text-base sm:text-lg leading-relaxed">
-            Every project follows a structured workflow designed to minimise surprises and maximise outcomes.
+            Every project follows a structured workflow designed to minimize surprises and maximize outcomes.
           </p>
         </div>
 

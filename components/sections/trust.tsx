@@ -97,54 +97,17 @@ const testimonials = [
     rating: 5,
   },
   {
-    quote: "Working with Arutech was seamless from start to finish. They understood our vision for Digilab quickly and delivered a product we are proud to show clients.",
-    name: "Sandeep Yadav",
-    role: "Founder",
-    company: "Digilab",
-    initials: "SY",
-    gradient: "from-orange-400 to-rose-500",
+    quote: "I was honestly nervous handing over my portfolio — as an animator, it's everything. But Arutech just got it. The site feels creative, personal, and professional all at once. My clients keep complimenting it before they even see my actual work!",
+    name: "Faleesha",
+    role: "Content Creator & Animator",
+    company: "Animax Agency",
+    initials: "FL",
+    gradient: "from-violet-400 to-purple-600",
     avatar: (
       <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="40" cy="40" r="40" fill="url(#g2)" />
         <defs>
           <radialGradient id="g2" cx="30%" cy="30%">
-            <stop offset="0%" stopColor="#FB923C" />
-            <stop offset="100%" stopColor="#E11D48" />
-          </radialGradient>
-        </defs>
-        {/* Head */}
-        <circle cx="40" cy="30" r="13" fill="#FDDCB5" />
-        {/* Short hair */}
-        <path d="M27 26 Q27 15 40 14 Q53 15 53 26 Q50 18 40 18 Q30 18 27 26Z" fill="#1E293B" />
-        {/* Eyes */}
-        <ellipse cx="35" cy="29" rx="2" ry="2.5" fill="#1E293B" />
-        <ellipse cx="45" cy="29" rx="2" ry="2.5" fill="#1E293B" />
-        {/* Glasses */}
-        <rect x="31" y="26" width="8" height="6" rx="3" stroke="#475569" strokeWidth="1.5" fill="none" />
-        <rect x="41" y="26" width="8" height="6" rx="3" stroke="#475569" strokeWidth="1.5" fill="none" />
-        <line x1="39" y1="29" x2="41" y2="29" stroke="#475569" strokeWidth="1.5" />
-        {/* Smile */}
-        <path d="M35 36 Q40 40 45 36" stroke="#92400E" strokeWidth="1.5" strokeLinecap="round" fill="none" />
-        {/* Suit / shirt */}
-        <path d="M20 68 Q25 54 40 52 Q55 54 60 68Z" fill="#1E293B" />
-        <path d="M37 52 L40 58 L43 52" fill="white" />
-        <line x1="40" y1="58" x2="40" y2="65" stroke="white" strokeWidth="1.5" />
-      </svg>
-    ),
-    rating: 5,
-  },
-  {
-    quote: "They built my animation portfolio website with a level of creativity and attention to detail I did not expect. It perfectly represents my work as a content creator.",
-    name: "Sandeep Tamta",
-    role: "Content Creator & Animator",
-    company: "",
-    initials: "ST",
-    gradient: "from-violet-400 to-purple-600",
-    avatar: (
-      <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="40" cy="40" r="40" fill="url(#g3)" />
-        <defs>
-          <radialGradient id="g3" cx="30%" cy="30%">
             <stop offset="0%" stopColor="#A78BFA" />
             <stop offset="100%" stopColor="#7C3AED" />
           </radialGradient>
@@ -166,6 +129,43 @@ const testimonials = [
         {/* Creative hoodie */}
         <path d="M20 68 Q25 54 40 52 Q55 54 60 68Z" fill="#4C1D95" />
         <path d="M36 52 Q40 56 44 52 Q42 60 40 63 Q38 60 36 52Z" fill="#6D28D9" />
+      </svg>
+    ),
+    rating: 5,
+  },
+  {
+    quote: "Working with Arutech was seamless from start to finish. They understood our vision for Digilab quickly and delivered a product we are proud to show clients.",
+    name: "Sandeep Yadav",
+    role: "Founder",
+    company: "Digilab",
+    initials: "SY",
+    gradient: "from-orange-400 to-rose-500",
+    avatar: (
+      <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="40" cy="40" r="40" fill="url(#g3)" />
+        <defs>
+          <radialGradient id="g3" cx="30%" cy="30%">
+            <stop offset="0%" stopColor="#FB923C" />
+            <stop offset="100%" stopColor="#E11D48" />
+          </radialGradient>
+        </defs>
+        {/* Head */}
+        <circle cx="40" cy="30" r="13" fill="#FDDCB5" />
+        {/* Short hair */}
+        <path d="M27 26 Q27 15 40 14 Q53 15 53 26 Q50 18 40 18 Q30 18 27 26Z" fill="#1E293B" />
+        {/* Eyes */}
+        <ellipse cx="35" cy="29" rx="2" ry="2.5" fill="#1E293B" />
+        <ellipse cx="45" cy="29" rx="2" ry="2.5" fill="#1E293B" />
+        {/* Glasses */}
+        <rect x="31" y="26" width="8" height="6" rx="3" stroke="#475569" strokeWidth="1.5" fill="none" />
+        <rect x="41" y="26" width="8" height="6" rx="3" stroke="#475569" strokeWidth="1.5" fill="none" />
+        <line x1="39" y1="29" x2="41" y2="29" stroke="#475569" strokeWidth="1.5" />
+        {/* Smile */}
+        <path d="M35 36 Q40 40 45 36" stroke="#92400E" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+        {/* Suit / shirt */}
+        <path d="M20 68 Q25 54 40 52 Q55 54 60 68Z" fill="#1E293B" />
+        <path d="M37 52 L40 58 L43 52" fill="white" />
+        <line x1="40" y1="58" x2="40" y2="65" stroke="white" strokeWidth="1.5" />
       </svg>
     ),
     rating: 5,
