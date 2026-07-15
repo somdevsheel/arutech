@@ -80,6 +80,11 @@
 
 html { scroll-behavior: smooth; }
 
+/* Justify all paragraph / body text — excludes headings */
+p, li, blockquote, td, .text-justify-content {
+  text-align: justify;
+}
+
 body {
   background-color: var(--bg-base);
   color: var(--text-primary);

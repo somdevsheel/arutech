@@ -138,7 +138,7 @@ export default function Services() {
               </div>
               <a
                 href="/"
-            onClick={(e) => { e.preventDefault(); document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" }); }}
+                onClick={(e) => { e.preventDefault(); document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" }); }}
                 className={`inline-flex items-center gap-1.5 text-sm font-semibold ${service.color} hover:underline transition-all group-hover:gap-2.5`}
               >
                 {service.cta}
