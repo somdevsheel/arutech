@@ -20,14 +20,12 @@ export default function Vision() {
         </div>
 
         <h2 className="animate-on-scroll delay-100 font-display text-4xl lg:text-6xl font-bold text-white leading-tight mb-6 tracking-tight">
-          Software that{" "}
-          <span className="gradient-text">thinks ahead</span>
-          <br />
-          of the problem.
+          Building Unthinkable,{" "}
+          <span className="gradient-text">Thinkable!</span>
         </h2>
 
         <p className="animate-on-scroll delay-200 text-gray-400 text-lg lg:text-xl leading-relaxed max-w-2xl mx-auto mb-10">
-          We believe the best software isn't just functional — it anticipates. From the products we build in-house to the systems we create for clients, our goal is to build things that remain valuable long after they're launched.
+          We help businesses transform ambitious ideas into intelligent digital products through custom software development, AI solutions, web development, mobile app development, workflow automation, and digital transformation services. Our mission is to build scalable technology that solves today's challenges while preparing organizations for tomorrow's opportunities.
         </p>
 
         {/* Vision pillars */}

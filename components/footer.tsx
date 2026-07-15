@@ -19,8 +19,8 @@ const footerLinks = {
   Company: [
     { label: "About Us", href: "/about-us" },
     { label: "Projects", href: "/projects" },
-    { label: "Blog", href: "/blog" },
-    { label: "Learning", href: "/learning" },
+    // { label: "Blog", href: "/blog" },       // hidden — enable when ready
+    // { label: "Learning", href: "/learning" }, // hidden — enable when ready
     { label: "Contact", href: "#contact" },
   ],
 };
@@ -30,6 +30,14 @@ const keywords = [
   "React web development", "React Native app development", "Next.js development company",
   "software consultancy India", "digital marketing agency", "business analytics",
   "free business analysis", "web app development India", "IT consultancy services",
+  "AI Development Company", "Custom Software Development", "Web Development Company",
+  "Mobile App Development", "AI Automation Services", "SEO Services",
+  "Google Ads Management", "Social Media Marketing", "Workflow Automation",
+  "Custom Web Applications", "AI Chatbot Development", "Business Process Automation",
+  "Software Development Company", "Web Application Development", "Mobile App Development Company",
+  "Digital Marketing Company", "SEO Agency", "Google Ads Agency",
+  "Social Media Marketing Agency", "Business Automation Solutions", "Cloud Software Development",
+  "Enterprise AI Solutions", "React Development Company", "Custom AI Solutions",
 ];
 
 const socials = [

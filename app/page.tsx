@@ -37,7 +37,7 @@ export default function Home() {
       <Trust />
       <TechStack />
       <Process />
-      <Funnels />
+      {/* <Funnels /> */}
       <Products />
       <Portfolio />
       <Vision />

@@ -165,8 +165,8 @@ export default function Services() {
           ))}
         </div>
 
-        {/* Featured CTA banner */}
-        <div className="animate-on-scroll delay-400 rounded-2xl bg-gradient-to-r from-orange-500 to-amber-500 p-6 sm:p-10 lg:p-14 text-center">
+        {/* Featured CTA banner — hidden temporarily */}
+        <div className="hidden animate-on-scroll delay-400 rounded-2xl bg-gradient-to-r from-orange-500 to-amber-500 p-6 sm:p-10 lg:p-14 text-center">
           <h3 className="font-display text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-3">
             Ready to Build, Automate &amp; Grow?
           </h3>

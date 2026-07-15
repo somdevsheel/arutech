@@ -258,11 +258,11 @@ export default function Contact() {
               <span className="text-xs font-mono text-orange-600 tracking-widest font-semibold uppercase">Get in Touch</span>
             </div>
             <h2 className="animate-on-scroll delay-100 font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
-              Let&apos;s Build{" "}
-              <span className="gradient-text">Something</span>
+              Lets Build{" "}
+              <span className="gradient-text">Together!</span>
             </h2>
             <p className="animate-on-scroll delay-200 text-gray-600 text-base sm:text-lg leading-relaxed mb-8">
-              Have a project in mind? We&apos;d love to hear about it. Tell us what you&apos;re building and we&apos;ll follow up within 24 hours.
+              Every great product starts with a conversation. Whether you&apos;re launching a startup, scaling an established business, or embracing AI-driven transformation, we&apos;re here to build solutions that create lasting impact, let&apos;s turn your vision into reality.
             </p>
 
             {/* Contact details */}
