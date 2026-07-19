@@ -4,6 +4,7 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const services = [
   {
+    link: "/services/mobile-app-development",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
@@ -19,6 +20,7 @@ const services = [
     hoverShadow: "hover:shadow-emerald-50",
   },
   {
+    link: "/services/ai-development",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -34,6 +36,7 @@ const services = [
     hoverShadow: "hover:shadow-indigo-50",
   },
   {
+    link: "/services/automation-workflows",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
@@ -49,6 +52,7 @@ const services = [
     hoverShadow: "hover:shadow-amber-50",
   },
   {
+    link: "/services/website-development",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
@@ -64,6 +68,7 @@ const services = [
     hoverShadow: "hover:shadow-violet-50",
   },
   {
+    link: "/services/google-ads-ppc",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
@@ -79,6 +84,7 @@ const services = [
     hoverShadow: "hover:shadow-orange-50",
   },
   {
+    link: "/services/social-media-marketing",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
@@ -127,7 +133,11 @@ export default function Services() {
               <div className={`inline-flex p-3 rounded-xl ${service.bg} ${service.color} mb-5`}>
                 {service.icon}
               </div>
-              <h3 className="font-display text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
+              {service.link ? (
+                <a href={service.link} className="block font-display text-xl font-semibold text-gray-900 mb-3 hover:underline">{service.title}</a>
+              ) : (
+                <h3 className="font-display text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
+              )}
               <p className="text-gray-600 text-sm leading-relaxed mb-5 text-justify">{service.description}</p>
               <div className="flex flex-wrap gap-2 mb-6">
                 {service.tags.map((tag) => (

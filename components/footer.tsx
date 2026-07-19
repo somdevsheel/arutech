@@ -4,12 +4,12 @@ import Image from "next/image";
 
 const footerLinks = {
   Services: [
-    { label: "AI & Machine Learning", href: "#services" },
-    { label: "Cloud Deployment", href: "#services" },
-    { label: "Web Development", href: "#services" },
-    { label: "Mobile Apps", href: "#services" },
-    { label: "Digital Marketing", href: "#services" },
-    { label: "Business Analytics", href: "#services" },
+    { label: "AI & Machine Learning", href: "/services/ai-development" },
+    { label: "Cloud Deployment", href: "/services/cloud-deployment" },
+    { label: "Web Development", href: "/services/website-development" },
+    { label: "Mobile Apps", href: "/services/mobile-app-development" },
+    { label: "Digital Marketing", href: "/services/digital-marketing-seo" },
+    { label: "Business Analytics", href: "/services/business-analytics" },
   ],
   Products: [
     { label: "Freenoo", href: "https://freenoo.com", external: true },

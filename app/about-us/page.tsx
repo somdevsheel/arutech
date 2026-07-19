@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import FloatingTab from "@/components/FloatingTab";
+import Contact from "@/components/sections/contact";
 
 export const metadata: Metadata = {
   title: "About Us | Arutech Consultancy Services LLP",
@@ -139,6 +140,7 @@ export default function AboutUs() {
         </a>
       </section>
 
+      <Contact />
       <Footer />
     </main>
   );
