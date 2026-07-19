@@ -126,18 +126,15 @@ export default function Services() {
         {/* 3×2 service card grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
           {services.map((service, i) => (
-            <div
+            <a
               key={service.title}
-              className={`animate-on-scroll delay-${(i + 1) * 100} card-hover group bg-white rounded-2xl p-7 border border-gray-100 ${service.hoverBorder} shadow-sm hover:shadow-lg ${service.hoverShadow} transition-all`}
+              href={service.link ?? "/#contact"}
+              className={`animate-on-scroll delay-${(i + 1) * 100} card-hover group bg-white rounded-2xl p-7 border border-gray-100 ${service.hoverBorder} shadow-sm hover:shadow-lg ${service.hoverShadow} transition-all block cursor-pointer`}
             >
               <div className={`inline-flex p-3 rounded-xl ${service.bg} ${service.color} mb-5`}>
                 {service.icon}
               </div>
-              {service.link ? (
-                <a href={service.link} className="block font-display text-xl font-semibold text-gray-900 mb-3 hover:underline">{service.title}</a>
-              ) : (
-                <h3 className="font-display text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-              )}
+              <h3 className="font-display text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-5 text-justify">{service.description}</p>
               <div className="flex flex-wrap gap-2 mb-6">
                 {service.tags.map((tag) => (
@@ -146,17 +143,13 @@ export default function Services() {
                   </span>
                 ))}
               </div>
-              <a
-                href="/"
-                onClick={(e) => { e.preventDefault(); document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" }); }}
-                className={`inline-flex items-center gap-1.5 text-sm font-semibold ${service.color} hover:underline transition-all group-hover:gap-2.5`}
-              >
+              <span className={`inline-flex items-center gap-1.5 text-sm font-semibold ${service.color} group-hover:gap-2.5 transition-all`}>
                 {service.cta}
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </a>
-            </div>
+              </span>
+            </a>
           ))}
         </div>
 
