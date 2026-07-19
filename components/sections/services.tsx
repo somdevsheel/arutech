@@ -116,7 +116,7 @@ export default function Services() {
           </div>
           <h2 className="animate-on-scroll delay-100 font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
             Build Smarter Digital Experiences with{" "}
-            <span className="gradient-text">AI, Apps & Performance Marketing</span>
+            <span className="gradient-text">AI, Development & Performance Marketing</span>
           </h2>
           <p className="animate-on-scroll delay-200 text-gray-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto text-justify">
             Transform your ideas into scalable digital solutions with a team that combines cutting-edge technology and data-driven marketing — from custom mobile applications and AI-powered automation to high-converting websites, Google Ads, SEO, and social media marketing.
