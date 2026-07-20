@@ -115,7 +115,6 @@ export default function Services() {
             <span className="text-xs font-mono text-orange-600 tracking-widest font-semibold uppercase">Who We Can Help</span>
           </div>
           <h2 className="animate-on-scroll delay-100 font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
-            Build Smarter Digital Experiences with{" "}
             <span className="gradient-text">AI, Development & Performance Marketing</span>
           </h2>
           <p className="animate-on-scroll delay-200 text-gray-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto text-justify">
