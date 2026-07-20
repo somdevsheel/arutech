@@ -6,6 +6,7 @@ import CookieBanner from "@/components/cookie-banner";
 
 const BASE_URL = "https://arutechconsultancy.com";
 const GA_ID = "G-PZ2FZVD9DN";
+const GA_ID_2 = "G-4CKCE1NBGM";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -155,6 +156,7 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', '${GA_ID}');
+gtag('config', '${GA_ID_2}');
 `.trim();
 
 // Runs synchronously before first paint to apply the saved theme,
