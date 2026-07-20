@@ -97,7 +97,7 @@ export default function AutomationWorkflows() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="text-xs font-mono text-orange-500 uppercase tracking-widest font-semibold">Why Automate?</span>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-gray-900 mt-3 mb-4">Why Business Automation Matters</h2>
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-gray-900 mt-3 mb-4">Business Automation Matters</h2>
             <p className="text-gray-600 leading-relaxed text-justify">Modern businesses thrive on efficiency. Discover how workflow automation reduces manual effort, minimises errors, improves productivity, and lets your team focus on high-value work.</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
