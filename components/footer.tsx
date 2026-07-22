@@ -81,7 +81,7 @@ export default function Footer() {
               />
             </a>
             <p className="text-gray-500 text-sm leading-relaxed max-w-xs mb-6">
-              At Arutech Consultancy Services, we build intelligent software, AI-powered solutions, and digital marketing strategies that help businesses accelerate growth, streamline operations, and stay ahead in a rapidly evolving digital world.
+              Arutech Consultancy Services LLP is an India-based digital consultancy specialising in AI, Mobile Apps, Web Development, Automation, Google Ads, SEO and Social Media Marketing — built to deliver measurable business results.
             </p>
 
             {/* Socials */}
