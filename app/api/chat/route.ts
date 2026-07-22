@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const SYSTEM_PROMPT = `You are Arut, the AI assistant for Arutech Consultancy Services LLP — an Indian technology consulting company.
 
@@ -31,44 +32,37 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Invalid messages" }, { status: 400 });
     }
 
-    const apiKey = process.env.ANTHROPIC_API_KEY;
+    const apiKey = process.env.GEMINI_API_KEY;
 
-    // Fallback if no API key configured
     if (!apiKey) {
       return NextResponse.json({
         content: "Hi! I'm Arut, Arutech's assistant. Our AI chat is being set up. In the meantime, please reach out via the contact form or email hello@arutechconsultancy.com — we respond within 24 hours!",
       });
     }
 
-    const response = await fetch("https://api.anthropic.com/v1/messages", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "x-api-key": apiKey,
-        "anthropic-version": "2023-06-01",
-      },
-      body: JSON.stringify({
-        model: "claude-haiku-4-5-20251001",
-        max_tokens: 400,
-        system: SYSTEM_PROMPT,
-        messages: messages.slice(-10), // last 10 messages for context
-      }),
+    const genAI = new GoogleGenerativeAI(apiKey);
+    const model = genAI.getGenerativeModel({
+      model: "gemini-1.5-flash",
+      systemInstruction: SYSTEM_PROMPT,
     });
 
-    if (!response.ok) {
-      const err = await response.text();
-      console.error("Claude API error:", err);
-      return NextResponse.json({
-        content: "I'm having a momentary issue. Please try again or contact us at hello@arutechconsultancy.com.",
-      });
-    }
+    // Convert messages to Gemini history format (all except last user message)
+    const recent = messages.slice(-10);
+    const history = recent.slice(0, -1).map((m) => ({
+      role: m.role === "assistant" ? "model" : "user",
+      parts: [{ text: m.content }],
+    }));
 
-    const data = await response.json();
-    const content = data.content?.[0]?.text || "Sorry, I couldn't generate a response.";
+    const chat = model.startChat({ history });
+    const lastMessage = recent[recent.length - 1].content;
+    const result = await chat.sendMessage(lastMessage);
+    const content = result.response.text();
 
     return NextResponse.json({ content });
   } catch (err) {
     console.error("Chat API error:", err);
-    return NextResponse.json({ error: "Internal error" }, { status: 500 });
+    return NextResponse.json({
+      content: "I'm having a momentary issue. Please try again or contact us at hello@arutechconsultancy.com.",
+    });
   }
 }
