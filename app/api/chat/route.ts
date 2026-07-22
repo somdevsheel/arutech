@@ -42,7 +42,7 @@ export async function POST(req: Request) {
 
     const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({
-      model: "gemini-1.5-flash",
+      model: "gemini-2.0-flash",
       systemInstruction: SYSTEM_PROMPT,
     });
 
@@ -59,8 +59,14 @@ export async function POST(req: Request) {
     const content = result.response.text();
 
     return NextResponse.json({ content });
-  } catch (err) {
-    console.error("Chat API error:", err);
+  } catch (err: unknown) {
+    const msg = err instanceof Error ? err.message : "";
+    console.error("Chat API error:", msg);
+    if (msg.includes("429") || msg.includes("quota")) {
+      return NextResponse.json({
+        content: "I'm getting a lot of requests right now — please try again in a moment, or reach out directly at hello@arutechconsultancy.com.",
+      });
+    }
     return NextResponse.json({
       content: "I'm having a momentary issue. Please try again or contact us at hello@arutechconsultancy.com.",
     });
