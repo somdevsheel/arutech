@@ -12,10 +12,10 @@ export const metadata: Metadata = {
 };
 
 const values = [
-  { icon: "⚡", title: "Speed Without Shortcuts", description: "We move fast because we plan properly. Every sprint is grounded in architecture that was thought through before code was written." },
-  { icon: "🎯", title: "Outcomes Over Invoices", description: "We measure success by what you ship and what stays running — not by hours billed or scope expanded without reason." },
-  { icon: "🔒", title: "You Own Everything", description: "Every deliverable is documented, tested, and structured for handoff. You own the code, the infrastructure, and the roadmap." },
-  { icon: "🤝", title: "No Juniors on Client Work", description: "Small, senior team — you work directly with the people building your product. No layers, no surprises." },
+  { icon: "⚡", title: "Strategic Execution", description: "We move fast because we plan properly. Every sprint is grounded in architecture that was thought through before code was written." },
+  { icon: "🎯", title: "Business-First Approach", description: "We measure success by what you ship and what stays running — not by hours billed or scope expanded without reason." },
+  { icon: "🔒", title: "Transparency & Complete Ownership", description: "Every deliverable is documented, tested, and structured for handoff. You own the code, the infrastructure, and the roadmap." },
+  { icon: "🤝", title: "Results That Matter", description: "Small, senior team — you work directly with the people building your product. No layers, no surprises." },
 ];
 
 
@@ -76,7 +76,7 @@ export default function AboutUs() {
       <section className="py-20 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-xs font-mono text-orange-500 uppercase tracking-widest font-semibold">What We Stand For</span>
+            <span className="text-xs font-mono text-orange-500 uppercase tracking-widest font-semibold">We Stand For!</span>
             <h2 className="font-display text-4xl font-bold text-gray-900 mt-3">Our Values</h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
