@@ -40,8 +40,8 @@ export default function AboutUs() {
             <span className="text-xs font-mono text-orange-600 tracking-widest font-semibold uppercase">About Us</span>
           </div>
           <h1 className="font-display text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6 tracking-tight">
-            Build Smarter.{" "}
-            <span className="text-orange-500">Grow Faster.</span>
+            Build Smart.{" "}
+            <span className="text-orange-500">Grow Fast.</span>
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
             Arutech Consultancy Services LLP is an India-based digital consultancy specialising in AI, Mobile Apps, Web Development, Automation, Google Ads, SEO and Social Media Marketing — built to deliver measurable business results.

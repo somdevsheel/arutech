@@ -63,9 +63,9 @@ export default function Hero() {
           </div>
 
           <h1 className="animate-on-scroll delay-100 font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-[1.05] tracking-tight mb-6">
-            Build Smarter.
+            Build Smart.
             <br />
-            <span className="gradient-text">Grow Faster.</span>
+            <span className="gradient-text">Grow Fast.</span>
             <br />
             Scale Further.
           </h1>
