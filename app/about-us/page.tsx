@@ -18,14 +18,6 @@ const values = [
   { icon: "🤝", title: "No Juniors on Client Work", description: "Small, senior team — you work directly with the people building your product. No layers, no surprises." },
 ];
 
-const milestones = [
-  { year: "Mar 2025", label: "Founded", desc: "Arutech Consultancy Services LLP officially registered in India" },
-  { year: "Apr 2025", label: "First Projects", desc: "Onboarded first clients across web design, mobile and digital marketing" },
-  { year: "Late 2025", label: "Full-Service Agency", desc: "Added Google Ads, SEO, Social Media Marketing & AI Automation services" },
-  { year: "Mar 2026", label: "Freenoo Live", desc: "Shipped Freenoo — 25+ free PDF tools, live at freenoo.com" },
-  { year: "2026", label: "21+ Projects", desc: "21+ projects delivered across 6 service verticals with 99% satisfaction" },
-  { year: "Now", label: "Scaling Up", desc: "Expanding into AI Agents, LLMs and enterprise-grade automation solutions" },
-];
 
 export default function AboutUs() {
   return (
@@ -99,46 +91,6 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-12">
-            <span className="text-xs font-mono text-orange-500 uppercase tracking-widest font-semibold">Our Journey</span>
-            <h2 className="font-display text-4xl font-bold text-gray-900 mt-3">How We Got Here</h2>
-          </div>
-          <div className="relative pl-8 border-l-2 border-orange-100 space-y-8">
-            {milestones.map((m) => (
-              <div key={m.year} className="relative">
-                <div className="absolute -left-[41px] w-5 h-5 rounded-full bg-orange-500 border-4 border-white shadow-sm" />
-                <div className="bg-orange-50 border border-orange-100 rounded-xl p-5">
-                  <div className="flex items-center gap-3 mb-1">
-                    <span className="font-mono text-sm font-bold text-orange-500">{m.year}</span>
-                    <span className="text-xs font-semibold text-gray-500 bg-gray-100 px-2 py-0.5 rounded-full">{m.label}</span>
-                  </div>
-                  <p className="text-gray-700 text-sm">{m.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16 px-6 bg-orange-500 text-center text-white">
-        <h2 className="font-display text-3xl lg:text-4xl font-bold mb-4">Ready to work together?</h2>
-        <p className="text-orange-100 text-lg mb-8 max-w-xl mx-auto">
-          Tell us what you&apos;re building. We&apos;ll respond within 24 hours.
-        </p>
-        <a
-          href="/#contact"
-          className="inline-flex items-center gap-2 px-8 py-4 bg-white text-orange-500 font-semibold rounded-xl hover:bg-orange-50 transition-all shadow-md"
-        >
-          Get in Touch
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
-        </a>
-      </section>
 
       <Contact />
       <Footer />
