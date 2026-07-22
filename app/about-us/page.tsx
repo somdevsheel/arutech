@@ -36,7 +36,7 @@ export default function AboutUs() {
             <span className="text-orange-500">Grow Fast.</span>
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
-            Arutech Consultancy Services LLP is an India-based digital consultancy specialising in AI, Mobile Apps, Web Development, Automation, Google Ads, SEO and Social Media Marketing — built to deliver measurable business results.
+            At Arutech Consultancy Services, we build intelligent software, AI-powered solutions, and digital marketing strategies that help businesses accelerate growth, streamline operations, and stay ahead in a rapidly evolving digital world.
           </p>
         </div>
       </section>
