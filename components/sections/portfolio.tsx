@@ -27,6 +27,31 @@ function BrowserFrame({ src, alt, url }: { src: string; alt: string; url: string
   );
 }
 
+function MetricsFrame({ metrics }: { metrics: { label: string; value: string }[] }) {
+  return (
+    <div className="rounded-xl overflow-hidden border border-gray-200">
+      <div className="flex items-center gap-2 px-3 py-2 bg-gray-100 border-b border-gray-200">
+        <span className="w-2 h-2 rounded-full bg-red-400" />
+        <span className="w-2 h-2 rounded-full bg-yellow-400" />
+        <span className="w-2 h-2 rounded-full bg-green-400" />
+        <div className="flex-1 mx-2 px-3 py-1 rounded-md bg-white border border-gray-200 text-[10px] text-gray-400 font-mono">
+          meta ads · campaign results
+        </div>
+      </div>
+      <div className="bg-gradient-to-br from-blue-100/60 to-white h-36 p-3">
+        <div className="grid grid-cols-2 gap-2 h-full">
+          {metrics.map((m) => (
+            <div key={m.label} className="bg-white/80 rounded-lg border border-blue-100 flex flex-col items-center justify-center p-2">
+              <span className="font-bold text-blue-600 text-sm leading-tight">{m.value}</span>
+              <span className="text-[9px] text-gray-400 font-mono uppercase tracking-wide mt-0.5">{m.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function MockFrame({ dotColor, gradient }: { dotColor: string; gradient: string }) {
   return (
     <div className="rounded-xl overflow-hidden border border-gray-200">
@@ -124,6 +149,27 @@ const projects = [
     dotColor: "bg-emerald-400",
     gradient: "bg-gradient-to-br from-emerald-100/60 to-white",
   },
+  {
+    category: "Meta Ads · Performance Marketing",
+    title: "E-Commerce Meta Ads Campaign",
+    description: "Managed 4 sales campaigns delivering 1,180 purchases at just $0.15 cost per purchase — generating $61,269 in purchase conversion value from $180 ad spend.",
+    tags: ["Meta Ads", "Facebook & Instagram", "Retargeting", "App Installs"],
+    live: null,
+    screenshot: null,
+    screenshotUrl: null,
+    highlight: false,
+    borderClass: "border-blue-200",
+    bgClass: "from-blue-50 to-white",
+    badgeClass: "bg-blue-100 text-blue-700",
+    dotColor: "bg-blue-400",
+    gradient: "bg-gradient-to-br from-blue-100/60 to-white",
+    metrics: [
+      { label: "Purchases", value: "1,180" },
+      { label: "Cost/Purchase", value: "$0.15" },
+      { label: "Conv. Value", value: "$61K" },
+      { label: "ROAS", value: "340×" },
+    ],
+  },
 ];
 
 export default function Portfolio() {
@@ -210,7 +256,10 @@ export default function Portfolio() {
               className={`animate-on-scroll delay-${(i + 1) * 100} card-hover group relative rounded-2xl bg-gradient-to-br ${project.bgClass} border ${project.borderClass} overflow-hidden shadow-sm hover:shadow-md transition-all`}
             >
               <div className="p-4 pb-0">
-                <MockFrame dotColor={project.dotColor!} gradient={project.gradient!} />
+                {"metrics" in project && project.metrics
+                  ? <MetricsFrame metrics={project.metrics} />
+                  : <MockFrame dotColor={project.dotColor!} gradient={project.gradient!} />
+                }
               </div>
               <div className="p-5">
                 <span className={`inline-block px-2 py-0.5 text-[10px] font-semibold rounded-full border mb-2 ${project.badgeClass}`}>
