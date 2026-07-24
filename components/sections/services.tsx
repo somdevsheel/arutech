@@ -90,14 +90,62 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
       </svg>
     ),
-    title: "Social Media Marketing, Digital Marketing & SEO",
-    description: "Expand your online presence with strategic Social Media Marketing, performance-driven Digital Marketing, and expert SEO services. From engaging content creation, community management, and paid social campaigns to keyword research, technical SEO, local SEO, and content marketing.",
-    tags: ["Meta Ads", "Content Creation", "SEO & Local SEO", "Content Marketing", "Lead Generation"],
+    title: "Social Media Marketing",
+    description: "Grow your brand with strategic social media management, Meta Ads, content creation, community management, and influencer marketing that drives real engagement and measurable business results.",
+    tags: ["Meta Ads", "Content Creation", "Community Management", "Instagram & Facebook"],
     cta: "Grow My Presence",
     color: "text-rose-500",
     bg: "bg-rose-50",
     hoverBorder: "hover:border-rose-200",
     hoverShadow: "hover:shadow-rose-50",
+  },
+  {
+    link: "/services/digital-marketing-seo",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
+      </svg>
+    ),
+    title: "Digital Marketing",
+    description: "Drive qualified leads and measurable growth with performance-driven digital marketing — content marketing, email campaigns, lead generation, and data-driven strategies tailored to your business goals.",
+    tags: ["Content Marketing", "Lead Generation", "Email Marketing", "Performance Marketing"],
+    cta: "Grow My Business",
+    color: "text-violet-500",
+    bg: "bg-violet-50",
+    hoverBorder: "hover:border-violet-200",
+    hoverShadow: "hover:shadow-violet-50",
+  },
+  {
+    link: "/services/digital-marketing-seo",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+    ),
+    title: "SEO",
+    description: "Rank higher on Google and attract organic traffic with technical SEO, on-page optimisation, local SEO, link building, and content strategies built for sustainable long-term growth.",
+    tags: ["Technical SEO", "Local SEO", "Link Building", "On-Page SEO"],
+    cta: "Boost My Rankings",
+    color: "text-indigo-500",
+    bg: "bg-indigo-50",
+    hoverBorder: "hover:border-indigo-200",
+    hoverShadow: "hover:shadow-indigo-50",
+  },
+  {
+    link: "/services/cloud-deployment",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+      </svg>
+    ),
+    title: "Cloud Deployment",
+    description: "Deploy, scale, and manage your applications on AWS, GCP, or Azure with Docker, Kubernetes, CI/CD pipelines, and cloud migration expertise for reliable, cost-efficient infrastructure.",
+    tags: ["AWS / GCP / Azure", "Docker & Kubernetes", "CI/CD Pipelines", "Cloud Migration"],
+    cta: "Deploy to Cloud",
+    color: "text-sky-500",
+    bg: "bg-sky-50",
+    hoverBorder: "hover:border-sky-200",
+    hoverShadow: "hover:shadow-sky-50",
   },
 ];
 
