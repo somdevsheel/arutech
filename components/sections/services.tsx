@@ -68,6 +68,22 @@ const services = [
     hoverShadow: "hover:shadow-violet-50",
   },
   {
+    link: "/services/cloud-deployment",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+      </svg>
+    ),
+    title: "Cloud Deployment",
+    description: "Deploy, scale, and manage your applications on AWS, GCP, or Azure with Docker, Kubernetes, CI/CD pipelines, and cloud migration expertise for reliable, cost-efficient infrastructure.",
+    tags: ["AWS / GCP / Azure", "Docker & Kubernetes", "CI/CD Pipelines", "Cloud Migration"],
+    cta: "Deploy to Cloud",
+    color: "text-sky-500",
+    bg: "bg-sky-50",
+    hoverBorder: "hover:border-sky-200",
+    hoverShadow: "hover:shadow-sky-50",
+  },
+  {
     link: "/services/google-ads-ppc",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -130,22 +146,6 @@ const services = [
     bg: "bg-indigo-50",
     hoverBorder: "hover:border-indigo-200",
     hoverShadow: "hover:shadow-indigo-50",
-  },
-  {
-    link: "/services/cloud-deployment",
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-      </svg>
-    ),
-    title: "Cloud Deployment",
-    description: "Deploy, scale, and manage your applications on AWS, GCP, or Azure with Docker, Kubernetes, CI/CD pipelines, and cloud migration expertise for reliable, cost-efficient infrastructure.",
-    tags: ["AWS / GCP / Azure", "Docker & Kubernetes", "CI/CD Pipelines", "Cloud Migration"],
-    cta: "Deploy to Cloud",
-    color: "text-sky-500",
-    bg: "bg-sky-50",
-    hoverBorder: "hover:border-sky-200",
-    hoverShadow: "hover:shadow-sky-50",
   },
 ];
 
