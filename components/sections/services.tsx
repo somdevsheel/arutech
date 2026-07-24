@@ -116,7 +116,7 @@ const services = [
     hoverShadow: "hover:shadow-rose-50",
   },
   {
-    link: "/services/digital-marketing-seo",
+    link: "/services/digital-marketing",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
@@ -132,7 +132,7 @@ const services = [
     hoverShadow: "hover:shadow-violet-50",
   },
   {
-    link: "/services/digital-marketing-seo",
+    link: "/services/seo",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
