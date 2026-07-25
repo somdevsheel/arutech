@@ -3,6 +3,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import FloatingTab from "@/components/FloatingTab";
 import Contact from "@/components/sections/contact";
+import ProofOfWorkSlideshow from "@/components/ProofOfWorkSlideshow";
 
 export const metadata: Metadata = {
   title: "Digital Marketing Agency India | Lead Generation & Content Marketing",
@@ -120,6 +121,9 @@ export default function DigitalMarketing() {
           </div>
         </div>
       </section>
+
+      {/* Proof of Work Slideshow */}
+      <ProofOfWorkSlideshow />
 
       {/* Process */}
       <section className="py-16 lg:py-20 px-6 bg-gray-900">
