@@ -132,7 +132,7 @@ export default function Industries() {
             Helping Businesses{" "}
             <span className="gradient-text">Across Industries</span>
           </h2>
-          <p className="animate-on-scroll delay-200 text-gray-600 text-base sm:text-lg leading-relaxed text-justify">
+          <p className="animate-on-scroll delay-200 text-gray-600 text-base sm:text-lg leading-relaxed text-center">
             We deliver tailored digital solutions across a wide range of industries — from healthcare and education to retail, finance, and beyond.
           </p>
         </div>

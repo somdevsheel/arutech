@@ -70,7 +70,7 @@ export default function Hero() {
             Scale Further.
           </h1>
 
-          <p className="animate-on-scroll delay-200 text-base sm:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto mb-10 text-justify">
+          <p className="animate-on-scroll delay-200 text-base sm:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto mb-10 text-center">
             Whether you're a startup validating an idea, an established business modernizing operations, or an enterprise embracing AI.
           </p>
 

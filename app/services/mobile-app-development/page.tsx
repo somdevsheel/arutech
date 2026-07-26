@@ -111,7 +111,7 @@ export default function MobileAppDevelopment() {
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="text-xs font-mono text-orange-500 uppercase tracking-widest font-semibold">Why Mobile?</span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-gray-900 mt-3 mb-4">Why Invest in Mobile App Development?</h2>
-            <p className="text-gray-600 leading-relaxed text-justify">Discover how a custom mobile application can improve customer engagement, increase operational efficiency, and create new revenue opportunities for your business.</p>
+            <p className="text-gray-600 leading-relaxed text-center">Discover how a custom mobile application can improve customer engagement, increase operational efficiency, and create new revenue opportunities for your business.</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {whyReasons.map((r) => (
@@ -183,7 +183,7 @@ export default function MobileAppDevelopment() {
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="text-xs font-mono text-orange-500 uppercase tracking-widest font-semibold">How We Work</span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-gray-900 mt-3 mb-4">Our Mobile App Development Process</h2>
-            <p className="text-gray-600 leading-relaxed text-justify">A transparent, agile development process that ensures faster delivery, high-quality code, and exceptional user experiences.</p>
+            <p className="text-gray-600 leading-relaxed text-center">A transparent, agile development process that ensures faster delivery, high-quality code, and exceptional user experiences.</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {process.map((step) => (
@@ -232,7 +232,7 @@ export default function MobileAppDevelopment() {
           <div className="text-center max-w-2xl mx-auto mb-10">
             <span className="text-xs font-mono text-orange-500 uppercase tracking-widest font-semibold">Industries</span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-gray-900 mt-3 mb-4">Industries We Serve</h2>
-            <p className="text-gray-600 leading-relaxed text-justify">Our experience spans startups, SMEs, and enterprises across diverse industries with customised mobile solutions for every business.</p>
+            <p className="text-gray-600 leading-relaxed text-center">Our experience spans startups, SMEs, and enterprises across diverse industries with customised mobile solutions for every business.</p>
           </div>
           <div className="flex flex-wrap gap-3 justify-center">
             {industries.map((ind) => (
