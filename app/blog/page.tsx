@@ -5,6 +5,8 @@ import Footer from "@/components/footer";
 import FloatingTab from "@/components/FloatingTab";
 import clientPromise from "@/lib/mongodb";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Blog | Arutech Consultancy Services",
   description: "Insights on AI, web development, mobile apps, digital marketing, and business strategy from the Arutech team.",

@@ -8,6 +8,8 @@ import FloatingTab from "@/components/FloatingTab";
 import clientPromise from "@/lib/mongodb";
 import { ObjectId } from "mongodb";
 
+export const dynamic = "force-dynamic";
+
 marked.setOptions({ gfm: true, breaks: true });
 
 const DB = process.env.MONGODB_DB || "arutechdata";
