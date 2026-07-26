@@ -12,7 +12,7 @@ const navLinks = [
   { href: "/",          section: "portfolio",  label: "Projects" },
   // { href: "/learning",  section: null,        label: "Learning" },  // hidden — enable when ready
   { href: "/about-us",  section: null,        label: "About Us" },
-  // { href: "/blog",      section: null,        label: "Blog" },       // hidden — enable when ready
+  { href: "/blog",      section: null,        label: "Blog" },
   { href: "/",          section: "contact",   label: "Contact" },
 ];
 

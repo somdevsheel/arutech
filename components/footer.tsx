@@ -19,7 +19,7 @@ const footerLinks = {
   Company: [
     { label: "About Us", href: "/about-us" },
     { label: "Projects", href: "/projects" },
-    // { label: "Blog", href: "/blog" },       // hidden — enable when ready
+    { label: "Blog", href: "/blog" },
     // { label: "Learning", href: "/learning" }, // hidden — enable when ready
     { label: "Contact", href: "#contact" },
   ],
