@@ -15,6 +15,8 @@ type Status = "idle" | "loading" | "success" | "error";
 export default function Contact() {
   const sectionRef = useScrollReveal();
   const [form, setForm] = useState<FormState>({ name: "", email: "", phone: "", message: "" });
+  const [honeypot, setHoneypot] = useState("");
+  const [formLoadTime] = useState(() => Date.now());
   const [countryCode, setCountryCode] = useState("+91");
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState("");
@@ -226,6 +228,8 @@ export default function Contact() {
         body: JSON.stringify({
           ...form,
           phone: form.phone ? `${countryCode} ${form.phone}` : "",
+          _hp: honeypot,
+          _t: formLoadTime,
         }),
       });
       const data = await res.json();
@@ -347,6 +351,20 @@ export default function Contact() {
                 </div>
               ) : (
                 <div className="space-y-5">
+                  {/* Honeypot — hidden from humans, visible to bots */}
+                  <div style={{ position: "absolute", left: "-9999px", opacity: 0, height: 0, overflow: "hidden" }} aria-hidden="true">
+                    <label htmlFor="website_url">Website</label>
+                    <input
+                      id="website_url"
+                      type="text"
+                      name="website_url"
+                      value={honeypot}
+                      onChange={(e) => setHoneypot(e.target.value)}
+                      tabIndex={-1}
+                      autoComplete="off"
+                    />
+                  </div>
+
                   <div>
                     <label className="block text-xs font-semibold text-gray-600 mb-1.5">
                       Full Name <span className="text-orange-500">*</span>

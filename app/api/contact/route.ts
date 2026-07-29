@@ -7,10 +7,35 @@ interface ContactPayload {
   email: string;
   phone?: string;
   message: string;
+  _hp?: string;       // honeypot — must be empty
+  _t?: number;        // form load timestamp
 }
 
 function isValidEmail(email: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+// Common disposable / temporary email domains
+const BLOCKED_DOMAINS = new Set([
+  "mailinator.com","guerrillamail.com","guerrillamail.net","guerrillamail.org",
+  "guerrillamail.biz","guerrillamail.de","guerrillamail.info","tempmail.com",
+  "temp-mail.org","throwam.com","throwam.net","fakeinbox.com","maildrop.cc",
+  "dispostable.com","yopmail.com","yopmail.fr","trashmail.com","trashmail.me",
+  "trashmail.net","trashmail.org","trashmail.at","trashmail.io","trashmail.xyz",
+  "sharklasers.com","guerrillamailblock.com","grr.la","spam4.me","getairmail.com",
+  "filzmail.com","discard.email","spamgourmet.com","spamgourmet.net","spamgourmet.org",
+  "mailnull.com","spamhereplease.com","spamhereplease.net","10minutemail.com",
+  "10minutemail.net","10minutemail.org","10minute-email.com","10minutemail.de",
+  "minutemail.com","tempinbox.com","mailcatch.com","spamex.com","spamex.org",
+  "binkmail.com","safetymail.info","dodgeit.com","spamgob.com","mailnesia.com",
+  "mailnesia.net","spamevader.com","spam.la","spaml.com","spamtrap.ro",
+  "crazymailing.com","ihasmail.com","dispostable.com","throwam.com","antispam24.de",
+  "discardmail.com","discardmail.de","rejectmail.com","spaml.de","gowikicampus.com",
+]);
+
+function isDisposableEmail(email: string): boolean {
+  const domain = email.split("@")[1]?.toLowerCase();
+  return domain ? BLOCKED_DOMAINS.has(domain) : false;
 }
 
 // In-memory rate limiter: max 3 submissions per IP per hour.
@@ -50,7 +75,18 @@ export async function POST(request: NextRequest) {
     }
 
     const body: ContactPayload = await request.json();
-    const { name, email, phone, message } = body;
+    const { name, email, phone, message, _hp, _t } = body;
+
+    // ── Bot detection ────────────────────────────────────────────
+    // Honeypot: bots fill hidden fields, humans don't
+    if (_hp && _hp.trim().length > 0) {
+      return NextResponse.json({ success: true, message: "Thank you!" }); // silent accept
+    }
+
+    // Timing: reject if form submitted in under 3 seconds (bot speed)
+    if (_t && Date.now() - _t < 3000) {
+      return NextResponse.json({ success: true, message: "Thank you!" }); // silent accept
+    }
 
     // ── Validation ──────────────────────────────────────────────
     if (!name || !email || !message) {
@@ -81,6 +117,13 @@ export async function POST(request: NextRequest) {
     if (!isValidEmail(email.trim())) {
       return NextResponse.json(
         { success: false, error: "Please provide a valid email address." },
+        { status: 400 }
+      );
+    }
+
+    if (isDisposableEmail(email.trim())) {
+      return NextResponse.json(
+        { success: false, error: "Please use a real email address. Temporary/disposable emails are not accepted." },
         { status: 400 }
       );
     }
