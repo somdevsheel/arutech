@@ -66,7 +66,7 @@ export default function Products() {
                   <span key={tag} className="px-2.5 py-1 text-xs text-gray-500 bg-gray-100 rounded-lg">{tag}</span>
                 ))}
               </div>
-              <div className="flex items-center gap-4 flex-wrap">
+              <div className="flex items-center gap-3 flex-wrap">
                 <a
                   href="https://freenoo.com"
                   target="_blank"
@@ -77,6 +77,18 @@ export default function Products() {
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
+                </a>
+                <a
+                  href="https://indusapp.store/w4qowwp6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:-translate-y-0.5 transition-transform inline-flex"
+                >
+                  <img
+                    src="https://docstore.indusappstore.com/public/external/developerdashboard-static/badge-black-background-english.png"
+                    alt="Get it on Indus Appstore"
+                    className="h-11 w-auto"
+                  />
                 </a>
                 <a
                   href="/"
