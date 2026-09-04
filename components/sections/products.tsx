@@ -91,6 +91,18 @@ export default function Products() {
                   />
                 </a>
                 <a
+                  href="https://play.google.com/store/apps/details?id=com.freenoo.app&pcampaignid=web_share"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:-translate-y-0.5 transition-transform inline-flex"
+                >
+                  <img
+                    src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                    alt="Get it on Google Play"
+                    className="h-11 w-auto"
+                  />
+                </a>
+                <a
                   href="/"
                   onClick={(e) => { e.preventDefault(); document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" }); }}
                   className="inline-flex items-center gap-1.5 text-sm font-semibold text-orange-500 hover:text-orange-600 hover:underline transition-all"
