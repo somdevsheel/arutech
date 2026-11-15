@@ -181,9 +181,11 @@ export const products: Product[] = [
         {
           title: "1. About This Policy",
           paragraphs: [
-            "This Privacy Policy applies to the Freenoo Android app (package com.freenoo.app) and the Freenoo website at freenoo.com (together, \"Freenoo\"). Freenoo is developed and operated by Arutech Consultancy Services LLP (\"Arutech\", \"we\", \"us\" or \"our\"), a company registered in India.",
-            "It explains what happens to your information and your files when you use Freenoo. The short version: Freenoo does not require an account and does not collect or share personal data.",
+            "This Privacy Policy applies to the Freenoo Android app (package com.freenoo.app). The app is developed and operated by Arutech Consultancy Services LLP (\"Arutech\", \"we\", \"us\" or \"our\"), a company registered in India.",
+            "It explains what happens to your information and your files when you use the Freenoo app. The short version: the app does not require an account and does not collect or share personal data.",
+            "The Freenoo website at freenoo.com is covered by its own privacy policy, linked below.",
           ],
+          links: [{ label: "Freenoo website Privacy Policy", href: "https://www.freenoo.com/privacy" }],
         },
         {
           title: "2. Information We Do Not Collect",
