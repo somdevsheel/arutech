@@ -2,7 +2,9 @@
 
 import Image from "next/image";
 
-const footerLinks = {
+type FooterLink = { label: string; href: string; external?: boolean };
+
+const footerLinks: Record<string, FooterLink[]> = {
   Services: [
     { label: "AI & Machine Learning", href: "/services/ai-development" },
     { label: "Cloud Deployment", href: "/services/cloud-deployment" },
@@ -12,9 +14,13 @@ const footerLinks = {
     { label: "Business Analytics", href: "/services/business-analytics" },
   ],
   Products: [
-    { label: "Freenoo", href: "https://freenoo.com", external: true },
-    { label: "Instachat", href: "#products" },
-    { label: "Moneto AI Terminal", href: "#products" },
+    { label: "GPS Camera", href: "/products/gps-camera" },
+    { label: "GPS Camera Privacy Policy", href: "/products/gps-camera/privacy-policy" },
+    { label: "Freenoo", href: "/products/freenoo" },
+    { label: "Freenoo Privacy Policy", href: "/products/freenoo/privacy-policy" },
+    { label: "Instachat", href: "/products/instachat" },
+    { label: "Moneto AI Terminal", href: "/products/moneto" },
+    { label: "All Products", href: "/products" },
   ],
   Company: [
     { label: "About Us", href: "/about-us" },

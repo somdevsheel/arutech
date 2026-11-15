@@ -103,8 +103,7 @@ export default function Products() {
                   />
                 </a>
                 <a
-                  href="/"
-                  onClick={(e) => { e.preventDefault(); document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" }); }}
+                  href="/products/freenoo"
                   className="inline-flex items-center gap-1.5 text-sm font-semibold text-orange-500 hover:text-orange-600 hover:underline transition-all"
                 >
                   Know more
@@ -180,8 +179,7 @@ export default function Products() {
                 <span className="px-2.5 py-1 bg-gray-100 rounded-lg">Android</span>
               </div>
               <a
-                href="/"
-                onClick={(e) => { e.preventDefault(); document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" }); }}
+                href="/products/instachat"
                 className="inline-flex items-center gap-1.5 text-sm font-semibold text-pink-500 hover:text-pink-600 hover:underline transition-all"
               >
                 Know more
@@ -213,8 +211,7 @@ export default function Products() {
                 ))}
               </div>
               <a
-                href="/"
-                onClick={(e) => { e.preventDefault(); document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" }); }}
+                href="/products/moneto"
                 className="inline-flex items-center gap-1.5 text-xs font-semibold text-violet-500 hover:text-violet-600 hover:underline transition-all"
               >
                 Know more
@@ -238,8 +235,7 @@ export default function Products() {
                 A platform that rethinks how teams interact with AI infrastructure. Details shared when the time is right.
               </p>
               <a
-                href="/"
-                onClick={(e) => { e.preventDefault(); document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" }); }}
+                href="/products"
                 className="inline-flex items-center gap-1.5 text-xs font-semibold text-orange-500 hover:text-orange-600 hover:underline transition-all"
               >
                 Know more
